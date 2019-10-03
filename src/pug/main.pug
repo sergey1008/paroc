@@ -6,9 +6,37 @@ html(lang="ru")
 		include inc/head.pug
 		include inc/css.pug
 	body.main.loading
-		include inc/loader.pug
 		include inc/header.pug
 		main#content
+			.wrapper
+				.main-tabs
+					.main-tabs__top
+						.main-tabs__tab.active(data-id="1")
+							figure
+								img(src="img/ico-tab-1.png", alt="")
+							.main-tabs__tab-title Расчет изоляций<br> труб
+						.main-tabs__tab(data-id="2")
+							figure
+								img(src="img/ico-tab-2.png", alt="")
+							.main-tabs__tab-title Расчет изоляций<br> плоскостей
+						.main-tabs__tab(data-id="3")
+							figure
+								img(src="img/ico-tab-3.png", alt="")
+							.main-tabs__tab-title Расчет изоляция<br> емкостей
+						.main-tabs__tab(data-id="4")
+							figure
+								img(src="img/ico-tab-4.png", alt="")
+							.main-tabs__tab-title Открыть последнее<br> сохранение
+						.main-tabs__tab(data-id="5")
+							figure
+								img(src="img/ico-tab-5.png", alt="")
+							.main-tabs__tab-title Очистить форму
+					.main-tabs__content.active(data-id="1")
+					.main-tabs__content(data-id="2")
+					.main-tabs__content(data-id="3")
+					.main-tabs__content(data-id="4")
+					.main-tabs__content(data-id="5")
+
 			
 
 

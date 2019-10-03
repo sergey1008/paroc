@@ -3,35 +3,11 @@ header.head-cont
 		.head
 			.head-logo
 				a(href="/")
-					//- include ../../img/index-logo.svg
-			nav.main-nav
-				ul.main-nav__list
-					each item, i in [{title: 'Каталог', href: ""}, {title: 'О компании', href: ""}, {title: 'Доставка', href: ""}, {title: 'оплата ', href: ""}, {title: 'контакты', href: ""}]
-						li.main-nav__item
-							a(href=''+item.href+'').main-nav__link=item.title
-
-			.head-contacts
-				.head-phone
-					a(href="tel:+79815342122") +7-981-534-21-22 
-
-				.head-callback
-					a(href="").fancybox Заказать звонок
+					img(src="img/index-logo.jpg", alt="")
+			.head-text
+				.head-text__top Программа расчёта тепловой изоляции PAROC
+				.head-text__bot Расчёты выполняются согласно СП 61.13330.2012
 
 
-			.head-search
-				span
-					//- include ../../img/ico-search.svg
-
-			.head-favorite
-				a(href="")
-					span(data-count="2")
-						//- include ../../img/ico-favorite.svg
-			.head-cart
-				a(href="")
-					span(data-count="2")
-						//- include ../../img/ico-cart.svg
-			.burger
-				span
-
-
-
+			
+			

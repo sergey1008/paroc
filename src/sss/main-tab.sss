@@ -1,0 +1,30 @@
+.main-tabs
+	&__top
+		display: flex
+		justify-content: space-between
+
+	&__tab
+		display: flex
+		flex-direction: column
+		align-items: center
+		padding: 10px 20px
+		border: 1px solid transparent
+		transition: border-color .3s ease
+		cursor: pointer
+
+		&:not(:last-child)
+			margin-right: 20px
+
+		&:hover
+			border-color: var(--main-color)
+
+
+		figure
+			margin-bottom: 10px
+
+		&-title
+			text-align: center
+
+
+		&.active
+			border-color: var(--main-color)
