@@ -1,0 +1,106 @@
+.footer
+	display: flex
+	justify-content: space-between
+
+	&-cont
+		margin-top: 120px
+		background-color: var(--background-color)
+		padding: 60px 0 70px
+
+
+	&__el
+		display: flex
+		flex-direction: column
+		justify-content: space-between
+
+		&-phone
+			display: flex
+			flex-direction: column
+
+			a
+				&[href^="tel:"]
+
+					font-size: em(14)
+					letter-spacing: 0.02em
+					text-transform: uppercase
+
+					color: #000000
+
+			.fancybox
+				font-size: em(12)
+				letter-spacing: 0.02em
+				color: #AEAEAE
+
+		&-email
+			a
+				font-size: em(12)
+				letter-spacing: 0.02em
+
+				color: #000000
+
+	&__copy
+		display: flex
+		flex-direction: column
+		font-size: em(12)
+		letter-spacing: 0.02em
+
+		a
+
+			color: #000000
+
+
+	&__subscriber
+		max-width: 390px
+
+		&-text
+			font-size: em(12)
+			letter-spacing: 0.02em
+			margin-bottom: 25px
+
+		&-form
+			input
+
+				&[type="text"]
+					width: 185px
+					height: 50px
+					border: 0
+					background-color: #fff
+					padding: 0 30px
+
+				&[type="submit"]
+					width: 185px
+					height: 50px
+
+					border: 1px solid #000000
+					background-color: var(--background-color)
+					margin-left: 10px
+
+
+
+.dev
+	display: flex
+	align-items: center
+
+	&-text
+		margin-right: 10px
+		font-size: em(12)
+		letter-spacing: 0.02em
+
+
+.f-menu
+	
+	li
+		margin-top: 0 !important
+
+		&:before
+			display: none !important
+
+		&:not(:last-child)
+			margin-bottom: 10px !important
+
+	a
+		font-size: em(12)
+		letter-spacing: 0.02em
+		color: #000
+
+

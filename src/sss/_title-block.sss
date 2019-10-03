@@ -1,0 +1,57 @@
+.title-block
+
+	&__title
+		margin-top: 60px
+
+		h1
+			font-weight: bold
+			font-size: em(22)
+			letter-spacing: 0.05em
+
+	&-cont
+		padding: 45px 0 30px
+
+.bread-crumbs
+	line-height: calc(16 / 12)
+	
+	&__link, &__this
+		display: inline
+		text-transform: uppercase
+		font-size: em(12)
+
+	&__this
+		color: #B2B2B2
+
+	&__link
+		margin-right: 14px
+		color: #000
+
+		&:after
+			content: ""
+			border-top: 1px solid #000
+			border-right: 1px solid #000
+			display: inline-block
+			transform: rotate(45deg)
+			size: 5px
+			margin: 0 0 2px 14px
+
+		a
+			color: #000
+
+@media (max-width: 1500px)
+	.title-block
+
+		&__title
+			font-size: 12px
+
+@media (max-width: 1000px)
+	.title-block
+
+		&__title
+
+			h1
+				font-size: 36px
+				line-height: 76%
+
+		&__crumbs
+			display: none

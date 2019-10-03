@@ -1,0 +1,154 @@
+.burger
+	display: none
+
+
+.main
+	.head
+
+		&-cont
+			position: absolute
+			top: 0
+			left: 0
+			padding: 60px 0
+
+.inner
+	.head
+		color: #000
+
+		&-logo
+			margin-right: 70px
+
+			svg
+				path
+					stroke: #000
+
+		&-cont
+			padding: 45px 0
+			box-shadow: 0px 0px 29px rgba(0, 0, 0, 0.05)
+
+	.main-nav
+		margin: 0 auto 0 0
+
+		&__link
+			color: #000
+
+		&__item:first-child .main-nav__link:before
+			filter: invert(1)
+
+	.head-contacts
+		display: flex
+
+	.head-phone
+		margin-right: 20px
+
+		a
+			color: #000
+			font-size: em(16)
+			text-transform: uppercase
+			line-height: 1
+
+	.head-callback
+		a
+			font-size: em(12)
+			letter-spacing: 0.02em
+			color: var(--main-color)
+			line-height: 1
+
+	.head-cart, .head-favorite, .head-search
+		svg
+			path
+				stroke: #000
+
+	.head-search
+		margin-left: 75px
+
+
+
+.head
+	display: flex
+	justify-content: space-between
+	align-items: center
+
+	&-cont
+		width: 100%
+		z-index: 10
+
+	&-logo
+		a
+			&:hover
+				border: 0
+
+	&-cart, &-favorite, &-search
+		margin-left: 40px
+
+		a
+			&:hover
+				border: 0
+
+	&-search
+		cursor: pointer
+
+	&-cart, &-favorite
+
+		span
+			position: relative
+
+			&:after
+				content: attr(data-count)
+				display: block
+				position: absolute
+				top: -10px
+				right: -7px
+				size: 15px
+				border-radius: 50%
+				background-color: var(--main-color)
+				color: #fff
+				font-size: 6px
+				font-weight: bold
+				text-align: center
+				line-height: 15px
+
+
+
+
+
+
+.main-nav
+	margin: 0 auto
+
+	&__list
+		display: flex
+		align-items: center
+
+	&__item
+		&:not(:last-child)
+			margin-right: 50px
+
+
+		&:first-child
+			.main-nav__link
+				position: relative
+				display: flex
+				align-items: center
+
+				&:before
+					content: ''
+					size: 10px
+					background-image: url('../img/ico-burger.svg')
+					background-repeat: no-repeat
+					background-position: center
+					margin-right: 10px
+					margin-bottom: -2px
+
+			
+
+	&__link
+		color: #fff
+		font-size: em(12)
+		text-transform: uppercase
+		line-height: 1
+
+
+.main
+	.head-contacts
+		display: none
