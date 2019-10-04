@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="utf-8"/>
+    <title>Главная</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1"/>
+    <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon"/>
+    <link rel="stylesheet" href="css/main.css"/>
+  </head>
+  <body class="main loading">
+    <header class="head-cont">
+      <div class="wrapper">
+        <div class="head">
+          <div class="head-logo"><a href="/"><img src="img/index-logo.jpg" alt=""/></a></div>
+          <div class="head-text">
+            <div class="head-text__top">Программа расчёта тепловой изоляции PAROC</div>
+            <div class="head-text__bot">Расчёты выполняются согласно СП 61.13330.2012</div>
+          </div>
+        </div>
+      </div>
+    </header>
+    <main id="content">
+      <div class="wrapper">
+        <form action="">
+          <div class="main-tabs">
+            <div class="main-tabs__top">
+              <div class="main-tabs__tab active" data-id="1">
+                <figure><img src="img/ico-tab-1.png" alt=""/></figure>
+                <div class="main-tabs__tab-title">Расчет изоляций<br> труб</div>
+              </div>
+              <div class="main-tabs__tab" data-id="2">
+                <figure><img src="img/ico-tab-2.png" alt=""/></figure>
+                <div class="main-tabs__tab-title">Расчет изоляций<br> плоскостей</div>
+              </div>
+              <div class="main-tabs__tab" data-id="3">
+                <figure><img src="img/ico-tab-3.png" alt=""/></figure>
+                <div class="main-tabs__tab-title">Расчет изоляция<br> емкостей</div>
+              </div>
+              <div class="main-tabs__tab" data-id="4">
+                <figure><img src="img/ico-tab-4.png" alt=""/></figure>
+                <div class="main-tabs__tab-title">Открыть последнее<br> сохранение</div>
+              </div>
+              <div class="main-tabs__tab" data-id="5">
+                <figure><img src="img/ico-tab-5.png" alt=""/></figure>
+                <div class="main-tabs__tab-title">Очистить форму</div>
+              </div>
+            </div>
+            <div class="main-tabs__content active" data-id="1">
+              <div class="section">
+                <div class="section-top">
+                  <div class="section-top__el"> <span>Секция 1</span></div>
+                </div>
+                <div class="section-bot">
+                  <div class="section-label">Название</div>
+                  <div class="section-input">
+                    <input type="text"/>
+                  </div>
+                  <div class="section-btn">
+                    <div class="default-btn">Добавить следующую секцию</div>
+                  </div>
+                  <div class="section-btn">
+                    <div class="btn">Удалить текущую секцию</div>
+                  </div>
+                </div>
+              </div>
+              <div class="characteristic">
+                <div class="default-input--checkbox">
+                  <input class="default-input__input--checkbox" type="checkbox" id="90"/>
+                  <label class="default-input__label--checkbox" for="90">Показать дополнительные параметры</label>
+                </div>
+                <div class="characteristic__list">
+                  <div class="characteristic__item">
+                    <div class="characteristic__item-top">
+                      <div class="characteristic__item-title">Окружающая среда<br> и параметры носителя</div>
+                      <div class="characteristic__item-ico" style="color: #e6f6fe; background-image: url('img/ico-pipe-1.png')"></div>
+                    </div>
+                    <div class="characteristic__item-filter">
+                      <div class="default-select">
+                        <div class="default-input__label">Регион прокладки</div>
+                        <select class="default-select__select">
+                          <option value="1">Европейская часть россии</option>
+                          <option value="2">Урал</option>
+                        </select>
+                      </div>
+                      <div class="default-select">
+                        <div class="default-input__label">Теплоноситель</div>
+                        <select class="default-select__select">
+                          <option value="1">Вода</option>
+                          <option value="2">Вода 2</option>
+                        </select>
+                      </div>
+                      <div class="default-input"><span>°C</span>
+                        <input class="default-input__input" type="text" value="20"/>
+                        <label class="default-input__label">Температура окружающей среды</label>
+                        <div class="default-input__error">
+                          <div class="error-text"><!-- текст ошибки --></div>
+                        </div>
+                      </div>
+                      <div class="default-input"><span>°C</span>
+                        <input class="default-input__input" type="text" value="100"/>
+                        <label class="default-input__label">Начальная температура носителя</label>
+                        <div class="default-input__error">
+                          <div class="error-text"><!-- текст ошибки --></div>
+                        </div>
+                      </div>
+                      <div class="default-input"><span>м/c</span>
+                        <input class="default-input__input" type="text" value="10"/>
+                        <label class="default-input__label">Скорость ветра</label>
+                        <div class="default-input__error">
+                          <div class="error-text"><!-- текст ошибки --></div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="characteristic__item">
+                    <div class="characteristic__item-top">
+                      <div class="characteristic__item-title">Параметры трубы</div>
+                      <div class="characteristic__item-ico" style="color: #fee6e6; background-image: url('img/ico-pipe-2.png')"></div>
+                    </div>
+                    <div class="characteristic__item-filter">
+                      <div class="default-select">
+                        <div class="default-input__label">Материал</div>
+                        <select class="default-select__select">
+                          <option value="1">Металл</option>
+                          <option value="2">Пластик</option>
+                        </select>
+                      </div>
+                      <div class="default-select">
+                        <div class="default-input__label">Внешнее покрытие</div>
+                        <select class="default-select__select">
+                          <option value="1">Без покровного слоя</option>
+                          <option value="2">Без покровного слоя 2</option>
+                        </select>
+                      </div>
+                      <div class="default-input"><span>мм</span>
+                        <input class="default-input__input" type="text" value="20"/>
+                        <label class="default-input__label">Внешний диаметр</label>
+                        <div class="default-input__error">
+                          <div class="error-text"><!-- текст ошибки --></div>
+                        </div>
+                      </div>
+                      <div class="default-input"><span>м</span>
+                        <input class="default-input__input" type="text" value="100"/>
+                        <label class="default-input__label">Длинна</label>
+                        <div class="default-input__error">
+                          <div class="error-text"><!-- текст ошибки --></div>
+                        </div>
+                      </div>
+                      <div class="default-input"><span>мм</span>
+                        <input class="default-input__input" type="text" value="3"/>
+                        <label class="default-input__label">Толщина стенки</label>
+                        <div class="default-input__error">
+                          <div class="error-text"><!-- текст ошибки --></div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="characteristic__item characteristic__item--dop">
+                    <div class="characteristic__item-top">
+                      <div class="characteristic__item-title">Дополнительные параметры</div>
+                      <div class="characteristic__item-ico" style="color: #e7faec; background-image: url('img/ico-pipe-3.png')"></div>
+                    </div>
+                    <div class="characteristic__item-filter">
+                      <div class="default-select">
+                        <div class="default-input__label">Способ крепления</div>
+                        <select class="default-select__select">
+                          <option value="1">Подвижные опоры</option>
+                          <option value="2">Подвижные опоры 2</option>
+                        </select>
+                      </div>
+                      <div class="default-select">
+                        <div class="default-input__label">Направление секции</div>
+                        <select class="default-select__select">
+                          <option value="1">Горизонтальное</option>
+                          <option value="2">Вертикальное</option>
+                        </select>
+                      </div>
+                      <div class="default-input default-input--checkbox">
+                        <input class="default-input__input--checkbox" type="checkbox" id="190"/>
+                        <label class="default-input__label--checkbox" for="190">Учесть потери через опорные кольца покровного слоя</label>
+                      </div>
+                      <div class="default-input default-input--checkbox">
+                        <input class="default-input__input--checkbox" type="checkbox" id="290"/>
+                        <label class="default-input__label--checkbox" for="290">Учитывать дополнительные теплопотери в СН</label>
+                      </div>
+                      <div class="default-input"><span>%</span>
+                        <input class="default-input__input" type="text" value="25"/>
+                        <label class="default-input__label">Потери на кольцах</label>
+                        <div class="default-input__error">
+                          <div class="error-text"><!-- текст ошибки --></div>
+                        </div>
+                      </div>
+                      <div class="default-input default-input--checkbox">
+                        <input class="default-input__input--checkbox" type="checkbox" id="390"/>
+                        <label class="default-input__label--checkbox" for="390">Наработка системы более 5000 часов</label>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="isolation tabs">
+                <div class="isolation-icon" style="color: #e7faec; background-image: url('img/ico-pipe-3.png')"></div>
+                <div class="isolation-title">Изоляция</div>
+                <div class="isolation-top tabs">
+                  <div class="tabs__tab active" data-id="1">СН</div>
+                  <div class="tabs__tab" data-id="2">СТ</div>
+                  <div class="tabs__tab" data-id="3">ТБ</div>
+                  <div class="tabs__tab" data-id="4">ПК</div>
+                  <div class="tabs__tab" data-id="5">З</div>
+                  <div class="tabs__tab" data-id="6">Ручной расчет</div>
+                </div>
+                <div class="isolation-bot tabs__content active" data-id="1">
+                  <div class="isolation-info">Предотвращение конденсации влаги на поверхности изолируемого оборудования или трубопровода</div>
+                  <div class="isolation-row">
+                    <div class="default-select">
+                      <div class="default-input__label">Изоляция</div>
+                      <select class="default-select__select">
+                        <option value="1">PAROC Pro Slab 30</option>
+                        <option value="2">PAROC Pro Slab 20</option>
+                      </select>
+                    </div>
+                    <div class="default-input"><span>%</span>
+                      <input class="default-input__input" type="text" value="70"/>
+                      <label class="default-input__label">Влажность</label>
+                      <div class="default-input__error">
+                        <div class="error-text"><!-- текст ошибки --></div>
+                      </div>
+                    </div><a href="">Посмотреть спецификацию</a>
+                  </div>
+                  <div class="isolation-gallery">
+                    <div class="isolation-gallery__img"><img src="img/photos/isolation.jpg" alt=""/></div>
+                  </div>
+                </div>
+                <div class="isolation-bot tabs__content" data-id="2"></div>
+                <div class="isolation-bot tabs__content" data-id="3"></div>
+                <div class="isolation-bot tabs__content" data-id="4"></div>
+                <div class="isolation-bot tabs__content" data-id="5"></div>
+                <div class="isolation-bot tabs__content" data-id="6"></div>
+              </div>
+            </div>
+            <div class="main-tabs__content" data-id="2"></div>
+            <div class="main-tabs__content" data-id="3"></div>
+            <div class="main-tabs__content" data-id="4"></div>
+            <div class="main-tabs__content" data-id="5"></div>
+          </div>
+        </form>
+      </div>
+    </main>
+    <footer class="footer">
+      <div class="wrapper">
+        <div class="footer-text">Данная программа рассчитывает характеристики системы с технической изоляцией PAROC и носит рекомендательный характер.<br> Paroc Group не несет ответственность за прямой или косвенный ущерб, в результате использования данной программыес</div>
+      </div>
+    </footer>
+    <script src="js/vendors.js"></script>
+    <script src="js/base.js"></script>
+    <script src="js/common.js"></script>
+  </body>
+</html>
