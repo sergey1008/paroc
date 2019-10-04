@@ -1,0 +1,55 @@
+.section
+	margin-bottom: 40px
+	
+	&-top
+		display: flex
+
+		&__el
+			position: relative
+			background-color: #fff
+			color: var(--main-color)
+			font-weight: bold
+			padding: 5px 13px 5px 5px
+			box-shadow: -3px 0px 2px -2px rgba(0,0,0,.2), -2px -3px 2px -2px rgba(0,0,0,.2)
+
+			&:after
+				content: ""
+				display: block
+				position: absolute
+				top: 0
+				right: -4px
+				width: 13px
+				height: 110%
+				margin-top: 0px
+				background: #fff
+				border-radius: 0 4px 0 0
+				transform: skewX(30deg)
+				z-index: 1
+				box-shadow: 5px -2px 1px -2px rgba(0, 0, 0, 0.2)
+
+
+	&-bot
+		display: flex
+		align-items: center
+		box-shadow: 0 0 2px 1px rgba(0, 0, 0, 0.2)
+		padding: 30px 25px
+
+
+	&-label
+		margin-right: 30px
+		color: var(--second-color)
+
+	&-input
+		flex: 1 1 auto
+
+		input
+			background-color: var(--background-color)
+			height: 30px
+			border: 0
+			box-shadow: none
+			padding: 0 20px
+			width: 100%
+
+	&-btn
+		margin-left: 30px
+

@@ -1,7 +1,7 @@
 import "./forms"
-import "./textPage/text-page"
+//import "./textPage/text-page"
 
-import {domReady} from "./xpage/index"
+//import {domReady} from "./xpage/index"
 
 declare global {
     interface Window {

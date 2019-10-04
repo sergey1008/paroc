@@ -1,0 +1,67 @@
+.isolation
+	padding: 20px
+	box-shadow: 0 0 2px 1px rgba(0, 0, 0, 0.2)
+
+	&-title
+		font-weight: bold
+		font-size: em(15)
+		text-transform: uppercase
+		margin-bottom: 25px
+
+	&-top
+		display: flex
+
+		.tabs__tab
+			border: 1px solid var(--second-color)
+			padding: 22px
+			text-align: center
+			line-height: 1
+			margin-bottom: 35px
+
+			&:not(:last-child)
+				font-weight: bold
+				font-size: em(16)
+				text-transform: uppercase
+				margin-right: 25px
+				min-width: 65px
+
+
+	&-info
+		color: var(--second-color)
+		margin-bottom: 40px
+
+	&-row
+		display: flex
+		align-items: flex-end
+
+		> *
+			&:not(:first-child)
+				margin-left: 60px
+
+		> a
+			margin-bottom: 15px
+
+		.default-select
+			max-width: 300px	
+			width: 100%
+
+			&__select
+				width: 100%
+
+		.default-input
+			max-width: 100px
+
+			span
+				position: absolute
+				bottom: 15px
+				left: 110px
+				font-weight: bold
+
+	&-gallery
+		display: flex
+		justify-content: flex-end
+
+		&__img
+			img
+				display: block
+				border: 1px solid var(--main-color)

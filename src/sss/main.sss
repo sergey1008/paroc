@@ -15,9 +15,42 @@
 @import "_footer.sss"
 @import "_header.sss"
 @import "main-tab.sss"
+@import "section.sss"
+@import "characteristic.sss"
+@import "isolation.sss"
 
 
 #content
 
 	.wrapper
 		width: 100%
+
+	select
+		background-image: url('../img/ico-arrow--select.png')
+		background-repeat: no-repeat
+		background-position: right center
+
+	select
+		padding: 0 20px 0 0
+	select, 
+	input[type="text"]
+		height: 50px
+		border: 0
+		border-bottom: 1px solid var(--second-color)
+		font-size: em(16)
+		font-weight: bold
+
+	input[type="text"]
+		padding: 0
+
+
+.default-btn
+	background-color: var(--main-color)
+	color: #fff
+	padding: 5px 25px
+	cursor: pointer
+
+
+.btn
+	color: var(--main-color)
+	cursor: pointer

@@ -1,8 +1,5 @@
 import $ from "jquery"
 
-import {Swiper, Navigation, EffectFade, Pagination} from "swiper/dist/js/swiper.esm.js";
-
-Swiper.use([Navigation, EffectFade, Pagination])
 
 window.$ = $;
 window.jQuery = $;
@@ -65,7 +62,9 @@ document.addEventListener("DOMContentLoaded",  () => {
 		});
 
 	
-	
+	$(".characteristic__item-title").height(Math.max(...$(".characteristic__item-title").map(function(){
+		return $(this).height();
+	})));
 
 
 
