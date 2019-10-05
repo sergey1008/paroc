@@ -1,0 +1,36 @@
+.results
+	padding: 20px
+	box-shadow: 0 0 2px 1px rgba(0, 0, 0, 0.2)
+	margin-bottom: 30px
+
+	&-top
+		display: flex
+
+		.title
+			margin-right: auto
+
+	&__item
+		display: flex
+		justify-content: space-between
+		padding: 15px 0
+
+		border-top: 1px solid #afafaa
+
+		&:last-child
+			border-bottom: 1px solid #afafaa
+
+		&-title
+			color: var(--second-color)
+
+		&-num
+			margin-left: 20px
+			font-weight: bold
+			font-size: em(16)
+
+	&__bot
+		margin-top: 25px
+		display: flex
+
+		> *
+			margin-right: 30px
+

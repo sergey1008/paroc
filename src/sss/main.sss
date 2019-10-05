@@ -18,6 +18,8 @@
 @import "section.sss"
 @import "characteristic.sss"
 @import "isolation.sss"
+@import "results.sss"
+@import "save-result.sss"
 
 
 #content
@@ -32,16 +34,27 @@
 
 	select
 		padding: 0 20px 0 0
-	select, 
-	input[type="text"]
+
+	select
 		height: 50px
 		border: 0
 		border-bottom: 1px solid var(--second-color)
 		font-size: em(16)
 		font-weight: bold
 
-	input[type="text"]
-		padding: 0
+	input
+		&[type="text"], 
+		&[type="tel"], 
+		&[type="email"]
+			height: 50px
+			border: 0
+			border-bottom: 1px solid var(--second-color)
+			font-size: em(16)
+			font-weight: bold
+
+	input
+		&[type="text"], &[type="tel"], &[type="email"]
+			padding: 0
 
 
 .default-btn
@@ -49,8 +62,57 @@
 	color: #fff
 	padding: 5px 25px
 	cursor: pointer
+	display: inline-block
+	border: 0
+	transition: background .3s ease
+
+	&:hover
+		background-color: #f91010
 
 
 .btn
+	position: relative
 	color: var(--main-color)
 	cursor: pointer
+
+	&.ico-pdf
+		display: flex
+		align-items: center
+
+		&:before
+			content: ''
+			display: inline-block
+			margin-right: 10px
+			size: 18px 22px
+			background-image: url('../img/ico-pdf.png')
+			background-repeat: no-repeat
+			background-position: center
+			background-size: contain
+
+
+
+
+.title-icon
+	position: relative
+	size: 49px 63px
+	margin: -20px -20px 0 20px
+	flex: none
+	background-repeat: no-repeat
+	background-position: center
+
+	&:after
+		content: ''
+		position: absolute
+		top: 0
+		right: 0
+		border: 26px solid transparent
+		border-top: 26px solid currentColor
+		border-right: 26px solid currentColor
+		z-index: -1
+
+.title
+	font-weight: bold
+	font-size: em(15)
+	text-transform: uppercase
+	margin-bottom: 25px
+	margin-right: auto

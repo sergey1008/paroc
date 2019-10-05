@@ -172,21 +172,30 @@ html(lang="ru")
 									.tabs__tab(data-id="6") Ручной расчет
 
 								.isolation-bot.tabs__content(data-id="1").active
-									.isolation-info Предотвращение конденсации влаги на поверхности изолируемого оборудования или трубопровода
+									.isolation-info Предотвращение замерзания вещества
+
+									.isolation-results
+										.isolation-results__top
+											.title Результат
+										each item, i in [{title: "Точный расчет толщины изоляции (мм):", num: "17"}, {title: "Рекомендуемая толщина для выбранной изоляции (мм):", num: "13.3"}, {title: "Температура поверхности внешнего слоя изоляции °C", num: "21.4"}, {title: "Тепловые потери согласно СП (Вт/м)", num: "55"}, {title: "Расчетные тепловые потери (Вт/м)", num: "55"}, {title: "Допустимая температура внешнего слоя согласно СП (°C)", num: "55"}, ]
+											.isolation-results__row
+												.isolation-results__title=item.title
+												.isolation-results__num=item.num
+
 									.isolation-row
 										.default-select
 											.default-input__label Изоляция
 											select.default-select__select
-												option(value="1") PAROC Pro Slab 30
+												option(value="1") PAROC Pro Slab 80
 												option(value="2") PAROC Pro Slab 20
 										.default-input
-											span %
-											input.default-input__input(type="text" value="70")
-											label.default-input__label Влажность
+											span ч
+											input.default-input__input(type="text" value="30")
+											label.default-input__label Время приостановки движения вещества
 											.default-input__error
 												.error-text
 													<!-- текст ошибки -->
-										a(href="") Посмотреть спецификацию
+										a(href="") Расчитать
 									.isolation-gallery
 										.isolation-gallery__img
 											img(src="img/photos/isolation.jpg", alt="")

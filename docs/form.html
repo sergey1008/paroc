@@ -2,13 +2,13 @@
 <html lang="ru">
   <head>
     <meta charset="utf-8"/>
-    <title>Ошибка 404</title>
+    <title>Расчет изоляции плоскостей</title>
     <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
     <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1"/>
     <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon"/>
     <link rel="stylesheet" href="css/main.css"/>
   </head>
-  <body class="inner loading page-404">
+  <body class="main loading">
     <header class="head-cont">
       <div class="wrapper">
         <div class="head">
@@ -21,21 +21,24 @@
       </div>
     </header>
     <main id="content">
-      <div class="inner-content">
-        <div class="inner-content__wrapper">
-          <div class="inner-content__content">
-            <div class="wrapper">
-              <div class="p-404">
-                <figure class="p-404__number"><img src="img/404.svg"/></figure>
-                <div class="p-404__text">
-                  <div class="p-404__text-title">Что-то пошло не так, страница больше не существует</div><a class="p-404__text-link" href="#"><span class="p-404-links"><span class="p-404-links__home home-btn"></span><span class="p-404-links__text">Пожалуйста, перейдите на главную страницу сайта</span></span></a>
-                </div>
-              </div>
+      <div class="wrapper">
+        <ul>
+          <li><a href="#form-1">Всплывающее окно</a></li>
+        </ul>
+      </div>
+    </main>
+    <div class="popup" id="form-1">
+      <div class="form__title"> <span>Последний сохранённый результат расчёта будет перезаписан</span><img src="img/form-logo.png" alt=""/></div>
+      <form action="#">
+        <div class="form__submit">
+          <div class="form__submi">
+            <div class="form__submit-btn">
+              <input class="default-btn" type="submit" value="Сохранить"/><a class="btn" href="">Отменить</a>
             </div>
           </div>
         </div>
-      </div>
-    </main>
+      </form>
+    </div>
     <div class="total-results-cont">
       <div class="wrapper">
         <div class="total-results">

@@ -11,5 +11,42 @@
 		color: var(--second-color)
 
 
+.total-results
+	&-cont
+		box-shadow: 0 -1px 2px 1px rgba(0, 0, 0, 0.1)
+		padding: 35px 0
+
+	&__list
+		display: flex
+		flex-wrap: wrap
+
+		margin: 0 0 -15px -45px
+
+	&__item
+		display: flex
+		align-items: center
+		margin: 0 0 15px 45px
+
+		&:first-child, &:nth-child(3n + 1)
+			max-width: 310px
+			width: 100%
+
+		// &:nth-child(2n + 1)
+		// 	max-width: 290px
+		// 	width: 100%
+
+
+
+
+		&-title
+			color: var(--second-color)
+			margin-right: auto
+
+		&-num
+			font-weight: bold
+			font-size: em(16)
+			margin-left: 30px
+			white-space: nowrap
+			min-width: 48px
 	
 

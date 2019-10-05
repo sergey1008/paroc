@@ -213,22 +213,51 @@
                   <div class="tabs__tab" data-id="6">Ручной расчет</div>
                 </div>
                 <div class="isolation-bot tabs__content active" data-id="1">
-                  <div class="isolation-info">Предотвращение конденсации влаги на поверхности изолируемого оборудования или трубопровода</div>
+                  <div class="isolation-info">Предотвращение замерзания вещества</div>
+                  <div class="isolation-results">
+                    <div class="isolation-results__top">
+                      <div class="title">Результат</div>
+                    </div>
+                    <div class="isolation-results__row">
+                      <div class="isolation-results__title">Точный расчет толщины изоляции (мм):</div>
+                      <div class="isolation-results__num">17</div>
+                    </div>
+                    <div class="isolation-results__row">
+                      <div class="isolation-results__title">Рекомендуемая толщина для выбранной изоляции (мм):</div>
+                      <div class="isolation-results__num">13.3</div>
+                    </div>
+                    <div class="isolation-results__row">
+                      <div class="isolation-results__title">Температура поверхности внешнего слоя изоляции °C</div>
+                      <div class="isolation-results__num">21.4</div>
+                    </div>
+                    <div class="isolation-results__row">
+                      <div class="isolation-results__title">Тепловые потери согласно СП (Вт/м)</div>
+                      <div class="isolation-results__num">55</div>
+                    </div>
+                    <div class="isolation-results__row">
+                      <div class="isolation-results__title">Расчетные тепловые потери (Вт/м)</div>
+                      <div class="isolation-results__num">55</div>
+                    </div>
+                    <div class="isolation-results__row">
+                      <div class="isolation-results__title">Допустимая температура внешнего слоя согласно СП (°C)</div>
+                      <div class="isolation-results__num">55</div>
+                    </div>
+                  </div>
                   <div class="isolation-row">
                     <div class="default-select">
                       <div class="default-input__label">Изоляция</div>
                       <select class="default-select__select">
-                        <option value="1">PAROC Pro Slab 30</option>
+                        <option value="1">PAROC Pro Slab 80</option>
                         <option value="2">PAROC Pro Slab 20</option>
                       </select>
                     </div>
-                    <div class="default-input"><span>%</span>
-                      <input class="default-input__input" type="text" value="70"/>
-                      <label class="default-input__label">Влажность</label>
+                    <div class="default-input"><span>ч</span>
+                      <input class="default-input__input" type="text" value="30"/>
+                      <label class="default-input__label">Время приостановки движения вещества</label>
                       <div class="default-input__error">
                         <div class="error-text"><!-- текст ошибки --></div>
                       </div>
-                    </div><a href="">Посмотреть спецификацию</a>
+                    </div><a href="">Расчитать</a>
                   </div>
                   <div class="isolation-gallery">
                     <div class="isolation-gallery__img"><img src="img/photos/isolation.jpg" alt=""/></div>

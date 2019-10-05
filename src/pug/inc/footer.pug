@@ -1,4 +1,14 @@
+.total-results-cont
+	.wrapper
+		.total-results
+			.total-results__list
+				each item, i in [{title: "Точный расчет толщины изоляции", num: "0.0 мм"}, {title: "Рекомендуемая толщина для выбранной изоляции", num: "0.0 мм"}, {title: "Тепловые потери согласно СП", num: "Вт/м^2"}, {title: "Допустимая температура внешнего слоя согласно СП", num: "°C"}, {title: "Температура поверхности внешнего слоя изоляции", num: "°C"}, ]
+					.total-results__item
+						.total-results__item-title=item.title
+						.total-results__item-num=item.num
+
 footer.footer
+
 	.wrapper
 		.footer-text Данная программа рассчитывает характеристики системы с технической изоляцией PAROC и носит рекомендательный характер.<br> Paroc Group не несет ответственность за прямой или косвенный ущерб, в результате использования данной программыес
 
