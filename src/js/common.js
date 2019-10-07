@@ -1,4 +1,5 @@
 import $ from "jquery"
+import "./tab.js"
 
 
 window.$ = $;
@@ -68,4 +69,7 @@ document.addEventListener("DOMContentLoaded",  () => {
 
 
 
+
 })
+
+

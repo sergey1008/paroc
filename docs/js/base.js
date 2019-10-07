@@ -284,6 +284,7 @@ if(false) {}
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var jquery__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! jquery */ "./node_modules/jquery/dist/jquery.js");
 /* harmony import */ var jquery__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(jquery__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var _tab_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./tab.js */ "./src/js/tab.js");
 function _toConsumableArray(arr) { return _arrayWithoutHoles(arr) || _iterableToArray(arr) || _nonIterableSpread(); }
 
 function _nonIterableSpread() { throw new TypeError("Invalid attempt to spread non-iterable instance"); }
@@ -291,6 +292,7 @@ function _nonIterableSpread() { throw new TypeError("Invalid attempt to spread n
 function _iterableToArray(iter) { if (Symbol.iterator in Object(iter) || Object.prototype.toString.call(iter) === "[object Arguments]") return Array.from(iter); }
 
 function _arrayWithoutHoles(arr) { if (Array.isArray(arr)) { for (var i = 0, arr2 = new Array(arr.length); i < arr.length; i++) { arr2[i] = arr[i]; } return arr2; } }
+
 
 
 window.$ = jquery__WEBPACK_IMPORTED_MODULE_0___default.a;
@@ -365,6 +367,41 @@ document.addEventListener("DOMContentLoaded", function () {
   jquery__WEBPACK_IMPORTED_MODULE_0___default()(".characteristic__item-title").height(Math.max.apply(Math, _toConsumableArray(jquery__WEBPACK_IMPORTED_MODULE_0___default()(".characteristic__item-title").map(function () {
     return jquery__WEBPACK_IMPORTED_MODULE_0___default()(this).height();
   }))));
+});
+
+/***/ }),
+
+/***/ "./src/js/tab.js":
+/*!***********************!*\
+  !*** ./src/js/tab.js ***!
+  \***********************/
+/*! no exports provided */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var jquery__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! jquery */ "./node_modules/jquery/dist/jquery.js");
+/* harmony import */ var jquery__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(jquery__WEBPACK_IMPORTED_MODULE_0__);
+
+jquery__WEBPACK_IMPORTED_MODULE_0___default()(function (_) {
+  jquery__WEBPACK_IMPORTED_MODULE_0___default()(".tabs__tab").click(function () {
+    var $this = jquery__WEBPACK_IMPORTED_MODULE_0___default()(this);
+    if ($this.hasClass("active")) return;
+    var id = $this.attr("data-id"),
+        $parent = $this.closest(".tabs");
+    $parent.find(".tabs__tab.active, .tabs__content.active").removeClass("active");
+    $this.addClass("active");
+    $parent.find(".tabs__content[data-id='" + id + "']").addClass("active");
+  });
+  jquery__WEBPACK_IMPORTED_MODULE_0___default()(".main-tabs__tab").click(function () {
+    var $this = jquery__WEBPACK_IMPORTED_MODULE_0___default()(this);
+    if ($this.hasClass("active")) return;
+    var id = $this.attr("data-id"),
+        $parent = $this.closest(".main-tabs");
+    $parent.find(".main-tabs__tab.active, .main-tabs__content.active").removeClass("active");
+    $this.addClass("active");
+    $parent.find(".main-tabs__content[data-id='" + id + "']").addClass("active");
+  });
 });
 
 /***/ })

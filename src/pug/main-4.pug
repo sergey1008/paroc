@@ -219,13 +219,13 @@ html(lang="ru")
 											.error-text
 												<!-- текст ошибки -->
 									.default-input
-										input.default-input__input(type="email" value="info@mail.ru")
+										input.default-input__input(type="email" pattern="[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\\.[A-Za-z]{1,63}$" inputmode="email" value="info@mail.ru" placeholder="info@mail.ru")
 										label.default-input__label Почта
 										.default-input__error
 											.error-text
 												<!-- текст ошибки -->
 									.default-input
-										input.default-input__input(type="tel" value="+7-900-123-12-13")
+										input.default-input__input.phone(type="tel" inputmode="tel" pattern='\\+7\\s\\([0-9]{3}\\)\\s[0-9]{3}-[0-9]{2}-[0-9]{2}' value="" placeholder="+7 (900) 123-12-13")
 										label.default-input__label Телефон
 										.default-input__error
 											.error-text

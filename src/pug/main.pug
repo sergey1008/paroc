@@ -33,11 +33,11 @@ html(lang="ru")
 									img(src="img/ico-tab-5.png", alt="")
 								.main-tabs__tab-title Очистить форму
 						.main-tabs__content.active(data-id="1")
-							.section
+							.section.tabs
 								.section-top
-									.section-top__el 
+									.section-top__el(data-id="1").tabs__tab.active
 										span Секция 1
-								.section-bot
+								.section-bot(data-id="1").tabs__content.active
 									.section-label Название
 									.section-input
 										input(type="text")
@@ -47,9 +47,9 @@ html(lang="ru")
 										.btn Удалить текущую секцию
 
 							.characteristic
-								.default-input--checkbox
-									input.default-input__input--checkbox(type="checkbox" id="90")
-									label.default-input__label--checkbox(for="90") Показать дополнительные параметры
+
+								input.default-input__input--checkbox(type="checkbox" id="90")
+								label.default-input__label--checkbox(for="90") Показать дополнительные параметры
 
 								.characteristic__list
 									.characteristic__item
@@ -163,7 +163,7 @@ html(lang="ru")
 								.isolation-head
 									.title Изоляция
 									.title-icon(style="color: #e7faec; background-image: url('img/ico-isolation.png')")
-								.isolation-top.tabs
+								.isolation-top
 									.tabs__tab(data-id="1").active СН
 									.tabs__tab(data-id="2") СТ
 									.tabs__tab(data-id="3") ТБ
@@ -187,6 +187,353 @@ html(lang="ru")
 												.error-text
 													<!-- текст ошибки -->
 										a(href="") Посмотреть спецификацию
+									.isolation-gallery
+										.isolation-gallery__img
+											img(src="img/photos/isolation.jpg", alt="")
+								.isolation-bot.tabs__content(data-id="2")
+									.isolation-info Предотвращение замерзания вещества
+
+									.isolation-results
+										.isolation-results__top
+											.title Результат
+										each item, i in [{title: "Точный расчет толщины изоляции (мм):", num: "17"}, {title: "Рекомендуемая толщина для выбранной изоляции (мм):", num: "13.3"}, {title: "Температура поверхности внешнего слоя изоляции °C", num: "21.4"}, {title: "Тепловые потери согласно СП (Вт/м)", num: "55"}, {title: "Расчетные тепловые потери (Вт/м)", num: "55"}, {title: "Допустимая температура внешнего слоя согласно СП (°C)", num: "55"}, ]
+											.isolation-results__row
+												.isolation-results__title=item.title
+												.isolation-results__num=item.num
+
+									.isolation-row
+										.default-select
+											.default-input__label Изоляция
+											select.default-select__select
+												option(value="1") PAROC Pro Slab 80
+												option(value="2") PAROC Pro Slab 20
+										.default-input
+											span ч
+											input.default-input__input(type="text" value="30")
+											label.default-input__label Время приостановки движения вещества
+											.default-input__error
+												.error-text
+													<!-- текст ошибки -->
+										a(href="") Расчитать
+									.isolation-gallery
+										.isolation-gallery__img
+											img(src="img/photos/isolation.jpg", alt="")
+								.isolation-bot.tabs__content(data-id="3")
+									.isolation-info Предотвращение замерзания 
+
+									.isolation-results
+										.isolation-results__top
+											.title Результат
+										each item, i in [{title: "Тепловые потери согласно СП (Вт/м^2):", num: "17"}, {title: "Расчётные тепловые потери (Вт/м^2):", num: "13.3"}, {title: "T пов-ти внешнего слоя изоляции (°C):", num: "21.4"}, {title: "Допустимая T согласно СП (°C):", num: "55"}, {title: "Полные тепловые потери (Вт):", num: "55"}]
+											.isolation-results__row
+												.isolation-results__title=item.title
+												.isolation-results__num=item.num
+
+									.isolation-row
+										.default-select
+											.default-input__label Изоляция
+											select.default-select__select
+												option(value="1") PAROC Pro Slab 80
+												option(value="2") PAROC Pro Slab 20
+										.default-input
+											span мм
+											input.default-input__input(type="text" value="30")
+											label.default-input__label Толщина
+											.default-input__error
+												.error-text
+													<!-- текст ошибки -->
+										a(href="") Добавить слой
+
+
+									.isolation__sloy-cont
+										.isolation__sloy
+											.isolation__sloy-top
+												.isolation__sloy-el Изоляция
+												.isolation__sloy-el Толщина
+												.isolation__sloy-el Температура
+											.isolation__sloy-info
+												.isolation__sloy-row
+													.isolation__sloy-el PAROC Pro Wired Mat 80
+													.isolation__sloy-el 30 мм
+													.isolation__sloy-el 44.2 °C
+												.isolation__sloy-row
+													.isolation__sloy-el PAROC Pro Wired Mat 80
+													.isolation__sloy-el 30 мм
+													.isolation__sloy-el 44.2 °C
+												.isolation__sloy-row
+													.isolation__sloy-el PAROC Pro Wired Mat 80
+													.isolation__sloy-el 30 мм
+													.isolation__sloy-el 44.2 °C
+										.isolation__sloy-bot
+											a(href="").btn Удалить внешний слой
+											a(href="").btn Удалить все слой
+											input.default-btn(type="submit" value="Расчитать")
+
+									.isolation-gallery
+										.isolation-gallery__img
+											img(src="img/photos/isolation.jpg", alt="")
+								.isolation-bot.tabs__content(data-id="4")
+									.isolation-info Предотвращение замерзания 
+
+									.isolation-results
+										.isolation-results__top
+											.title Результат
+										each item, i in [{title: "Тепловые потери согласно СП (Вт/м^2):", num: "17"}, {title: "Расчётные тепловые потери (Вт/м^2):", num: "13.3"}, {title: "T пов-ти внешнего слоя изоляции (°C):", num: "21.4"}, {title: "Допустимая T согласно СП (°C):", num: "55"}, {title: "Полные тепловые потери (Вт):", num: "55"}]
+											.isolation-results__row
+												.isolation-results__title=item.title
+												.isolation-results__num=item.num
+
+									.isolation-row
+										.default-select
+											.default-input__label Изоляция
+											select.default-select__select
+												option(value="1") PAROC Pro Slab 80
+												option(value="2") PAROC Pro Slab 20
+										.default-input
+											span мм
+											input.default-input__input(type="text" value="30")
+											label.default-input__label Толщина
+											.default-input__error
+												.error-text
+													<!-- текст ошибки -->
+										a(href="") Добавить слой
+
+
+									.isolation__sloy-cont
+										.isolation__sloy
+											.isolation__sloy-top
+												.isolation__sloy-el Изоляция
+												.isolation__sloy-el Толщина
+												.isolation__sloy-el Температура
+											.isolation__sloy-info
+												.isolation__sloy-row
+													.isolation__sloy-el PAROC Pro Wired Mat 80
+													.isolation__sloy-el 30 мм
+													.isolation__sloy-el 44.2 °C
+												.isolation__sloy-row
+													.isolation__sloy-el PAROC Pro Wired Mat 80
+													.isolation__sloy-el 30 мм
+													.isolation__sloy-el 44.2 °C
+												.isolation__sloy-row
+													.isolation__sloy-el PAROC Pro Wired Mat 80
+													.isolation__sloy-el 30 мм
+													.isolation__sloy-el 44.2 °C
+										.isolation__sloy-bot
+											a(href="").btn Удалить внешний слой
+											a(href="").btn Удалить все слой
+											input.default-btn(type="submit" value="Расчитать")
+
+									.isolation-gallery
+										.isolation-gallery__img
+											img(src="img/photos/isolation.jpg", alt="")
+								.isolation-bot.tabs__content(data-id="5")
+								.isolation-bot.tabs__content(data-id="6")
+
+							.results
+								.results-top
+									.title Результат
+									.title-icon(style="color: #ffe5e5; background-image: url('img/ico-file.png')")
+								.results__list
+									each item, i in [{title: "Точный расчет толщины изоляции", num: "0.0 мм"}, {title: "Рекомендуемая толщина для выбранной изоляции", num: "0.0 мм"}, {title: "Тепловые потери согласно СП", num: "Вт/м^2"}, {title: "Допустимая температура внешнего слоя согласно СП", num: "°C"}, {title: "Температура поверхности внешнего слоя изоляции", num: "°C"}, ]
+										.results__item
+											.results__item-title=item.title
+											.results__item-num=item.num
+								.results__bot
+									a(href="").default-btn Сформировать итоговую ведомость
+									a(href="").btn.ico-pdf протокол расчета
+
+							.save-result
+								.save-result__top
+									.title Сохранение результатов
+									.title-icon(style="color: #e6f6fe; background-image: url('img/ico-save.png')")
+								.save-result__bot
+									.default-input
+										input.default-input__input(type="text" value="Иван")
+										label.default-input__label Имя
+										.default-input__error
+											.error-text
+												<!-- текст ошибки -->
+									.default-input
+										input.default-input__input(type="email" pattern="[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\\.[A-Za-z]{1,63}$" inputmode="email" value="info@mail.ru" placeholder="info@mail.ru" )
+										label.default-input__label Почта
+										.default-input__error
+											.error-text
+												<!-- текст ошибки -->
+									.default-input
+										input.default-input__input.phone(type="tel" inputmode="tel" pattern='\\+7\\s\\([0-9]{3}\\)\\s[0-9]{3}-[0-9]{2}-[0-9]{2}' value="" placeholder="+7 (900) 123-12-13")
+										label.default-input__label Телефон
+										.default-input__error
+											.error-text
+												<!-- текст ошибки -->
+									input.default-btn(type="submit" value="Сохранить результат") 
+
+
+
+
+
+						.main-tabs__content(data-id="2")
+							.section
+								.section-top
+									.section-top__el 
+										span Секция 1
+								.section-bot
+									.section-label Название
+									.section-input
+										input(type="text")
+									.section-btn
+										.default-btn Добавить следующую секцию
+									.section-btn
+										.btn Удалить текущую секцию
+
+							.characteristic
+								input.default-input__input--checkbox(type="checkbox" id="91")
+								label.default-input__label--checkbox(for="91") Показать дополнительные параметры
+
+								.characteristic__list
+									.characteristic__item
+										.characteristic__item-top
+											.characteristic__item-title Окружающая среда<br> и параметры носителя
+											.title-icon(style="color: #e6f6fe; background-image: url('img/ico-pipe-1.png')")
+										.characteristic__item-filter
+											.default-select
+												.default-input__label Регион прокладки
+												select.default-select__select
+													option(value="1") Европейская часть россии
+													option(value="2") Урал
+											.default-select
+												.default-input__label Теплоноситель
+												select.default-select__select
+													option(value="1") Вода
+													option(value="2") Вода 2
+											.default-input
+												span °C
+												input.default-input__input(type="text" value="20")
+												label.default-input__label Температура окружающей среды
+												.default-input__error
+													.error-text
+														<!-- текст ошибки -->
+											.default-input
+												span °C
+												input.default-input__input(type="text" value="100")
+												label.default-input__label Начальная температура носителя
+												.default-input__error
+													.error-text
+														<!-- текст ошибки -->
+											.default-input
+												span м/c
+												input.default-input__input(type="text" value="10")
+												label.default-input__label Скорость ветра
+												.default-input__error
+													.error-text
+														<!-- текст ошибки -->
+
+									.characteristic__item
+										.characteristic__item-top
+											.characteristic__item-title Параметры трубы
+											.title-icon(style="color: #fee6e6; background-image: url('img/ico-pipe-2.png')")
+										.characteristic__item-filter
+											.default-select
+												.default-input__label Материал
+												select.default-select__select
+													option(value="1") Металл
+													option(value="2") Пластик
+											.default-select
+												.default-input__label Внешнее покрытие
+												select.default-select__select
+													option(value="1") Без покровного слоя
+													option(value="2") Без покровного слоя 2
+											.default-input
+												span мм
+												input.default-input__input(type="text" value="20")
+												label.default-input__label Внешний диаметр
+												.default-input__error
+													.error-text
+														<!-- текст ошибки -->
+											.default-input
+												span м
+												input.default-input__input(type="text" value="100")
+												label.default-input__label Длинна
+												.default-input__error
+													.error-text
+														<!-- текст ошибки -->
+											.default-input
+												span мм
+												input.default-input__input(type="text" value="3")
+												label.default-input__label Толщина стенки
+												.default-input__error
+													.error-text
+														<!-- текст ошибки -->
+									.characteristic__item.characteristic__item--dop
+										.characteristic__item-top
+											.characteristic__item-title Дополнительные параметры
+											.title-icon(style="color: #e7faec; background-image: url('img/ico-pipe-3.png')")
+										.characteristic__item-filter
+											.default-select
+												.default-input__label Способ крепления
+												select.default-select__select
+													option(value="1") Подвижные опоры
+													option(value="2") Подвижные опоры 2
+											.default-select
+												.default-input__label Направление секции
+												select.default-select__select
+													option(value="1") Горизонтальное
+													option(value="2") Вертикальное
+											.default-input.default-input--checkbox
+												input.default-input__input--checkbox(type="checkbox" id="190")
+												label.default-input__label--checkbox(for="190") Учесть потери через опорные кольца покровного слоя
+
+											.default-input.default-input--checkbox
+												input.default-input__input--checkbox(type="checkbox" id="290")
+												label.default-input__label--checkbox(for="290") Учитывать дополнительные теплопотери в СН
+
+											.default-input
+												span %
+												input.default-input__input(type="text" value="25")
+												label.default-input__label Потери на кольцах
+												.default-input__error
+													.error-text
+														<!-- текст ошибки -->
+											.default-input.default-input--checkbox
+												input.default-input__input--checkbox(type="checkbox" id="390")
+												label.default-input__label--checkbox(for="390") Наработка системы более 5000 часов
+							
+							.isolation.tabs
+								.isolation-head
+									.title Изоляция
+									.title-icon(style="color: #e7faec; background-image: url('img/ico-isolation.png')")
+								.isolation-top
+									.tabs__tab(data-id="1").active СН
+									.tabs__tab(data-id="2") СТ
+									.tabs__tab(data-id="3") ТБ
+									.tabs__tab(data-id="4") ПК
+									.tabs__tab(data-id="5") З
+									.tabs__tab(data-id="6") Ручной расчет
+
+								.isolation-bot.tabs__content(data-id="1").active
+									.isolation-info Предотвращение замерзания вещества
+
+									.isolation-results
+										.isolation-results__top
+											.title Результат
+										each item, i in [{title: "Точный расчет толщины изоляции (мм):", num: "17"}, {title: "Рекомендуемая толщина для выбранной изоляции (мм):", num: "13.3"}, {title: "Температура поверхности внешнего слоя изоляции °C", num: "21.4"}, {title: "Тепловые потери согласно СП (Вт/м)", num: "55"}, {title: "Расчетные тепловые потери (Вт/м)", num: "55"}, {title: "Допустимая температура внешнего слоя согласно СП (°C)", num: "55"}, ]
+											.isolation-results__row
+												.isolation-results__title=item.title
+												.isolation-results__num=item.num
+
+									.isolation-row
+										.default-select
+											.default-input__label Изоляция
+											select.default-select__select
+												option(value="1") PAROC Pro Slab 80
+												option(value="2") PAROC Pro Slab 20
+										.default-input
+											span ч
+											input.default-input__input(type="text" value="30")
+											label.default-input__label Время приостановки движения вещества
+											.default-input__error
+												.error-text
+													<!-- текст ошибки -->
+										a(href="") Расчитать
 									.isolation-gallery
 										.isolation-gallery__img
 											img(src="img/photos/isolation.jpg", alt="")
@@ -222,26 +569,418 @@ html(lang="ru")
 											.error-text
 												<!-- текст ошибки -->
 									.default-input
-										input.default-input__input(type="email" value="info@mail.ru")
+										input.default-input__input(type="email" pattern="[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\\.[A-Za-z]{1,63}$" inputmode="email" value="info@mail.ru" placeholder="info@mail.ru" )
 										label.default-input__label Почта
 										.default-input__error
 											.error-text
 												<!-- текст ошибки -->
 									.default-input
-										input.default-input__input(type="tel" value="+7-900-123-12-13")
+										input.default-input__input.phone(type="tel" inputmode="tel" pattern='\\+7\\s\\([0-9]{3}\\)\\s[0-9]{3}-[0-9]{2}-[0-9]{2}' value="" placeholder="+7 (900) 123-12-13")
 										label.default-input__label Телефон
 										.default-input__error
 											.error-text
 												<!-- текст ошибки -->
 									input.default-btn(type="submit" value="Сохранить результат") 
-
-
-
-
-
-						.main-tabs__content(data-id="2")
 						.main-tabs__content(data-id="3")
+							.section
+								.section-top
+									.section-top__el 
+										span Секция 1
+								.section-bot
+									.section-label Название
+									.section-input
+										input(type="text")
+									.section-btn
+										.default-btn Добавить следующую секцию
+									.section-btn
+										.btn Удалить текущую секцию
+
+							.characteristic
+								.characteristic__list
+									.characteristic__item
+										.characteristic__item-top
+											.characteristic__item-title Окружающая среда<br> и параметры носителя
+											.title-icon(style="color: #e6f6fe; background-image: url('img/ico-pipe-1.png')")
+										.characteristic__item-filter
+											.default-select
+												.default-input__label Регион прокладки
+												select.default-select__select
+													option(value="1") Европейская часть россии
+													option(value="2") Урал
+											.default-select
+												.default-input__label Теплоноситель
+												select.default-select__select
+													option(value="1") Вода
+													option(value="2") Вода 2
+											.default-input
+												span °C
+												input.default-input__input(type="text" value="20")
+												label.default-input__label Температура окружающей среды
+												.default-input__error
+													.error-text
+														<!-- текст ошибки -->
+											.default-input
+												span °C
+												input.default-input__input(type="text" value="100")
+												label.default-input__label Начальная температура носителя
+												.default-input__error
+													.error-text
+														<!-- текст ошибки -->
+											.default-input
+												span м/c
+												input.default-input__input(type="text" value="10")
+												label.default-input__label Скорость ветра
+												.default-input__error
+													.error-text
+														<!-- текст ошибки -->
+
+									.characteristic__item
+										.characteristic__item-top
+											.characteristic__item-title Параметры трубы
+											.title-icon(style="color: #fee6e6; background-image: url('img/ico-pipe-2.png')")
+										.characteristic__item-filter
+											.default-select
+												.default-input__label Материал
+												select.default-select__select
+													option(value="1") Металл
+													option(value="2") Пластик
+											.default-select
+												.default-input__label Внешнее покрытие
+												select.default-select__select
+													option(value="1") Без покровного слоя
+													option(value="2") Без покровного слоя 2
+											.default-input
+												span мм
+												input.default-input__input(type="text" value="20")
+												label.default-input__label Внешний диаметр
+												.default-input__error
+													.error-text
+														<!-- текст ошибки -->
+											.default-input
+												span м
+												input.default-input__input(type="text" value="100")
+												label.default-input__label Длинна
+												.default-input__error
+													.error-text
+														<!-- текст ошибки -->
+											.default-input
+												span мм
+												input.default-input__input(type="text" value="3")
+												label.default-input__label Толщина стенки
+												.default-input__error
+													.error-text
+														<!-- текст ошибки -->
+									
+							
+							.isolation.tabs
+								.isolation-head
+									.title Изоляция
+									.title-icon(style="color: #e7faec; background-image: url('img/ico-isolation.png')")
+								.isolation-top.tabs
+									.tabs__tab(data-id="1").active СН
+									.tabs__tab(data-id="2") СТ
+									.tabs__tab(data-id="3") ТБ
+									.tabs__tab(data-id="4") ПК
+									.tabs__tab(data-id="5") З
+									.tabs__tab(data-id="6") Ручной расчет
+
+								.isolation-bot.tabs__content(data-id="1").active
+									.isolation-info Предотвращение замерзания 
+
+									.isolation-results
+										.isolation-results__top
+											.title Результат
+										each item, i in [{title: "Тепловые потери согласно СП (Вт/м^2):", num: "17"}, {title: "Расчётные тепловые потери (Вт/м^2):", num: "13.3"}, {title: "T пов-ти внешнего слоя изоляции (°C):", num: "21.4"}, {title: "Допустимая T согласно СП (°C):", num: "55"}, {title: "Полные тепловые потери (Вт):", num: "55"}]
+											.isolation-results__row
+												.isolation-results__title=item.title
+												.isolation-results__num=item.num
+
+									.isolation-row
+										.default-select
+											.default-input__label Изоляция
+											select.default-select__select
+												option(value="1") PAROC Pro Slab 80
+												option(value="2") PAROC Pro Slab 20
+										.default-input
+											span мм
+											input.default-input__input(type="text" value="30")
+											label.default-input__label Толщина
+											.default-input__error
+												.error-text
+													<!-- текст ошибки -->
+										a(href="") Добавить слой
+
+
+									.isolation__sloy-cont
+										.isolation__sloy
+											.isolation__sloy-top
+												.isolation__sloy-el Изоляция
+												.isolation__sloy-el Толщина
+												.isolation__sloy-el Температура
+											.isolation__sloy-info
+												.isolation__sloy-row
+													.isolation__sloy-el PAROC Pro Wired Mat 80
+													.isolation__sloy-el 30 мм
+													.isolation__sloy-el 44.2 °C
+												.isolation__sloy-row
+													.isolation__sloy-el PAROC Pro Wired Mat 80
+													.isolation__sloy-el 30 мм
+													.isolation__sloy-el 44.2 °C
+												.isolation__sloy-row
+													.isolation__sloy-el PAROC Pro Wired Mat 80
+													.isolation__sloy-el 30 мм
+													.isolation__sloy-el 44.2 °C
+										.isolation__sloy-bot
+											a(href="").btn Удалить внешний слой
+											a(href="").btn Удалить все слой
+											input.default-btn(type="submit" value="Расчитать")
+
+									.isolation-gallery
+										.isolation-gallery__img
+											img(src="img/photos/isolation.jpg", alt="")
+
+								.isolation-bot.tabs__content(data-id="2")
+								.isolation-bot.tabs__content(data-id="3")
+								.isolation-bot.tabs__content(data-id="4")
+								.isolation-bot.tabs__content(data-id="5")
+								.isolation-bot.tabs__content(data-id="6")
+
+							.results
+								.results-top
+									.title Результат
+									.title-icon(style="color: #ffe5e5; background-image: url('img/ico-file.png')")
+								.results__list
+									each item, i in [{title: "Точный расчет толщины изоляции", num: "0.0 мм"}, {title: "Рекомендуемая толщина для выбранной изоляции", num: "0.0 мм"}, {title: "Тепловые потери согласно СП", num: "Вт/м^2"}, {title: "Допустимая температура внешнего слоя согласно СП", num: "°C"}, {title: "Температура поверхности внешнего слоя изоляции", num: "°C"}, ]
+										.results__item
+											.results__item-title=item.title
+											.results__item-num=item.num
+								.results__bot
+									a(href="").default-btn Сформировать итоговую ведомость
+									a(href="").btn.ico-pdf протокол расчета
+
+							.save-result
+								.save-result__top
+									.title Сохранение результатов
+									.title-icon(style="color: #e6f6fe; background-image: url('img/ico-save.png')")
+								.save-result__bot
+									.default-input
+										input.default-input__input(type="text" value="Иван")
+										label.default-input__label Имя
+										.default-input__error
+											.error-text
+												<!-- текст ошибки -->
+									.default-input
+										input.default-input__input(type="email" pattern="[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\\.[A-Za-z]{1,63}$" inputmode="email" value="info@mail.ru" placeholder="info@mail.ru")
+										label.default-input__label Почта
+										.default-input__error
+											.error-text
+												<!-- текст ошибки -->
+									.default-input
+										input.default-input__input.phone(type="tel" inputmode="tel" pattern='\\+7\\s\\([0-9]{3}\\)\\s[0-9]{3}-[0-9]{2}-[0-9]{2}' value="" placeholder="+7 (900) 123-12-13")
+										label.default-input__label Телефон
+										.default-input__error
+											.error-text
+												<!-- текст ошибки -->
+									input.default-btn(type="submit" value="Сохранить результат") 
 						.main-tabs__content(data-id="4")
+							.section
+								.section-top
+									.section-top__el 
+										span Секция 1
+								.section-bot
+									.section-label Название
+									.section-input
+										input(type="text")
+									.section-btn
+										.default-btn Добавить следующую секцию
+									.section-btn
+										.btn Удалить текущую секцию
+
+							.characteristic
+								.characteristic__list
+									.characteristic__item
+										.characteristic__item-top
+											.characteristic__item-title Окружающая среда<br> и параметры носителя
+											.title-icon(style="color: #e6f6fe; background-image: url('img/ico-pipe-1.png')")
+										.characteristic__item-filter
+											.default-select
+												.default-input__label Регион прокладки
+												select.default-select__select
+													option(value="1") Европейская часть россии
+													option(value="2") Урал
+											.default-select
+												.default-input__label Теплоноситель
+												select.default-select__select
+													option(value="1") Вода
+													option(value="2") Вода 2
+											.default-input
+												span °C
+												input.default-input__input(type="text" value="20")
+												label.default-input__label Температура окружающей среды
+												.default-input__error
+													.error-text
+														<!-- текст ошибки -->
+											.default-input
+												span °C
+												input.default-input__input(type="text" value="100")
+												label.default-input__label Начальная температура носителя
+												.default-input__error
+													.error-text
+														<!-- текст ошибки -->
+											.default-input
+												span м/c
+												input.default-input__input(type="text" value="10")
+												label.default-input__label Скорость ветра
+												.default-input__error
+													.error-text
+														<!-- текст ошибки -->
+
+									.characteristic__item
+										.characteristic__item-top
+											.characteristic__item-title Параметры трубы
+											.title-icon(style="color: #fee6e6; background-image: url('img/ico-pipe-2.png')")
+										.characteristic__item-filter
+											.default-select
+												.default-input__label Материал
+												select.default-select__select
+													option(value="1") Металл
+													option(value="2") Пластик
+											.default-select
+												.default-input__label Внешнее покрытие
+												select.default-select__select
+													option(value="1") Без покровного слоя
+													option(value="2") Без покровного слоя 2
+											.default-input
+												span мм
+												input.default-input__input(type="text" value="20")
+												label.default-input__label Внешний диаметр
+												.default-input__error
+													.error-text
+														<!-- текст ошибки -->
+											.default-input
+												span м
+												input.default-input__input(type="text" value="100")
+												label.default-input__label Длинна
+												.default-input__error
+													.error-text
+														<!-- текст ошибки -->
+											.default-input
+												span мм
+												input.default-input__input(type="text" value="3")
+												label.default-input__label Толщина стенки
+												.default-input__error
+													.error-text
+														<!-- текст ошибки -->
+									
+							
+							.isolation.tabs
+								.isolation-head
+									.title Изоляция
+									.title-icon(style="color: #e7faec; background-image: url('img/ico-isolation.png')")
+								.isolation-top.tabs
+									.tabs__tab(data-id="1").active СН
+									.tabs__tab(data-id="2") СТ
+									.tabs__tab(data-id="3") ТБ
+									.tabs__tab(data-id="4") ПК
+									.tabs__tab(data-id="6") Ручной расчет
+
+								.isolation-bot.tabs__content(data-id="1").active
+									.isolation-info Предотвращение замерзания 
+
+									.isolation-results
+										.isolation-results__top
+											.title Результат
+										each item, i in [{title: "Тепловые потери согласно СП (Вт/м^2):", num: "17"}, {title: "Расчётные тепловые потери (Вт/м^2):", num: "13.3"}, {title: "T пов-ти внешнего слоя изоляции (°C):", num: "21.4"}, {title: "Допустимая T согласно СП (°C):", num: "55"}, {title: "Полные тепловые потери (Вт):", num: "55"}]
+											.isolation-results__row
+												.isolation-results__title=item.title
+												.isolation-results__num=item.num
+
+									.isolation-row
+										.default-select
+											.default-input__label Изоляция
+											select.default-select__select
+												option(value="1") PAROC Pro Slab 80
+												option(value="2") PAROC Pro Slab 20
+										.default-input
+											span мм
+											input.default-input__input(type="text" value="30")
+											label.default-input__label Толщина
+											.default-input__error
+												.error-text
+													<!-- текст ошибки -->
+										a(href="") Добавить слой
+
+
+									.isolation__sloy-cont
+										.isolation__sloy
+											.isolation__sloy-top
+												.isolation__sloy-el Изоляция
+												.isolation__sloy-el Толщина
+												.isolation__sloy-el Температура
+											.isolation__sloy-info
+												.isolation__sloy-row
+													.isolation__sloy-el PAROC Pro Wired Mat 80
+													.isolation__sloy-el 30 мм
+													.isolation__sloy-el 44.2 °C
+												.isolation__sloy-row
+													.isolation__sloy-el PAROC Pro Wired Mat 80
+													.isolation__sloy-el 30 мм
+													.isolation__sloy-el 44.2 °C
+												.isolation__sloy-row
+													.isolation__sloy-el PAROC Pro Wired Mat 80
+													.isolation__sloy-el 30 мм
+													.isolation__sloy-el 44.2 °C
+										.isolation__sloy-bot
+											a(href="").btn Удалить внешний слой
+											a(href="").btn Удалить все слой
+											input.default-btn(type="submit" value="Расчитать")
+
+									.isolation-gallery
+										.isolation-gallery__img
+											img(src="img/photos/isolation.jpg", alt="")
+
+								.isolation-bot.tabs__content(data-id="2")
+								.isolation-bot.tabs__content(data-id="3")
+								.isolation-bot.tabs__content(data-id="4")
+								.isolation-bot.tabs__content(data-id="6")
+
+							.results
+								.results-top
+									.title Результат
+									.title-icon(style="color: #ffe5e5; background-image: url('img/ico-file.png')")
+								.results__list
+									each item, i in [{title: "Точный расчет толщины изоляции", num: "0.0 мм"}, {title: "Рекомендуемая толщина для выбранной изоляции", num: "0.0 мм"}, {title: "Тепловые потери согласно СП", num: "Вт/м^2"}, {title: "Допустимая температура внешнего слоя согласно СП", num: "°C"}, {title: "Температура поверхности внешнего слоя изоляции", num: "°C"}, ]
+										.results__item
+											.results__item-title=item.title
+											.results__item-num=item.num
+								.results__bot
+									a(href="").default-btn Сформировать итоговую ведомость
+									a(href="").btn.ico-pdf протокол расчета
+
+							.save-result
+								.save-result__top
+									.title Сохранение результатов
+									.title-icon(style="color: #e6f6fe; background-image: url('img/ico-save.png')")
+								.save-result__bot
+									.default-input
+										input.default-input__input(type="text" value="Иван")
+										label.default-input__label Имя
+										.default-input__error
+											.error-text
+												<!-- текст ошибки -->
+									.default-input
+										input.default-input__input(type="email" pattern="[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\\.[A-Za-z]{1,63}$" inputmode="email" value="info@mail.ru" placeholder="info@mail.ru")
+										label.default-input__label Почта
+										.default-input__error
+											.error-text
+												<!-- текст ошибки -->
+									.default-input
+										input.default-input__input.phone(type="tel" inputmode="tel" pattern='\\+7\\s\\([0-9]{3}\\)\\s[0-9]{3}-[0-9]{2}-[0-9]{2}' value="" placeholder="+7 (900) 123-12-13")
+										label.default-input__label Телефон
+										.default-input__error
+											.error-text
+												<!-- текст ошибки -->
+									input.default-btn(type="submit" value="Сохранить результат") 
 						.main-tabs__content(data-id="5")
 
 			

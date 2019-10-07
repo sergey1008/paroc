@@ -116,3 +116,20 @@
 	text-transform: uppercase
 	margin-bottom: 25px
 	margin-right: auto
+
+
+.tabs
+	&__tab
+		cursor: pointer
+		
+		&.active
+			border: 1px solid var(--main-color)
+	&__content
+
+		&:not(.active)
+			display: none
+
+.main-tabs
+	&__content
+		&:not(.active)
+			display: none

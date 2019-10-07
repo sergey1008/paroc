@@ -1,6 +1,14 @@
 .characteristic
 	margin-bottom: 30px
 
+	.default-input__input--checkbox
+		&:checked
+			~ .characteristic__list 
+				.characteristic__item--dop
+					display: block
+			
+
+
 	&__list
 		display: flex
 		margin: 38px 0 -20px -20px
@@ -31,6 +39,8 @@
 			margin-bottom: 20px
 			margin-right: auto
 
+		&--dop
+			display: none
 
 
 
