@@ -172,6 +172,73 @@ html(lang="ru")
 									.tabs__tab(data-id="6") Ручной расчет
 
 								.isolation-bot.tabs__content(data-id="1").active
+									.isolation-info Соблюдение норм плотности теплового потока (согласно СП 61.13330.2012,<br> актуализированная редакция СНиП 41-03-2003)
+									.isolation-row
+										.default-select
+											.default-input__label Изоляция
+											select.default-select__select
+												option(value="1") PAROC Pro Wired Mat 80
+												option(value="2") PAROC Pro Wired Mat 90
+										
+										a(href="") Посмотреть спецификацию
+									.isolation-gallery
+										.isolation-gallery__img
+											img(src="img/photos/isolation.jpg", alt="")
+								.isolation-bot.tabs__content(data-id="2")
+									.isolation-info Расчет толщины изоляции по заданному снижению (повышению) температуры вещества, хранимого в емкости
+
+									.isolation-row
+										.default-select
+											.default-input__label Изоляция
+											select.default-select__select
+												option(value="1") PAROC Pro Slab 30
+												option(value="2") PAROC Pro Slab 20
+										.default-input
+											span °C
+											input.default-input__input(type="text" value="60")
+											label.default-input__label Конечная температура вещества
+											.default-input__error
+												.error-text
+													<!-- текст ошибки -->
+										.default-input
+											span ч
+											input.default-input__input(type="text" value="40")
+											label.default-input__label Время хранения
+											.default-input__error
+												.error-text
+													<!-- текст ошибки -->
+										a(href="") Посмотреть спецификацию
+									.isolation-gallery
+										.isolation-gallery__img
+											img(src="img/photos/isolation.jpg", alt="")
+
+									//- .isolation-info Предотвращение замерзания вещества
+									//- .isolation-results
+									//- 	.isolation-results__top
+									//- 		.title Результат
+									//- 	each item, i in [{title: "Точный расчет толщины изоляции (мм):", num: "17"}, {title: "Рекомендуемая толщина для выбранной изоляции (мм):", num: "13.3"}, {title: "Температура поверхности внешнего слоя изоляции °C", num: "21.4"}, {title: "Тепловые потери согласно СП (Вт/м)", num: "55"}, {title: "Расчетные тепловые потери (Вт/м)", num: "55"}, {title: "Допустимая температура внешнего слоя согласно СП (°C)", num: "55"}, ]
+									//- 		.isolation-results__row
+									//- 			.isolation-results__title=item.title
+									//- 			.isolation-results__num=item.num
+
+									//- .isolation-row
+									//- 	.default-select
+									//- 		.default-input__label Изоляция
+									//- 		select.default-select__select
+									//- 			option(value="1") PAROC Pro Slab 80
+									//- 			option(value="2") PAROC Pro Slab 20
+									//- 	.default-input
+									//- 		span ч
+									//- 		input.default-input__input(type="text" value="30")
+									//- 		label.default-input__label Время приостановки движения вещества
+									//- 		.default-input__error
+									//- 			.error-text
+									//- 				<!-- текст ошибки -->
+									//- 	a(href="") Расчитать
+									//- .isolation-gallery
+									//- 	.isolation-gallery__img
+									//- 		img(src="img/photos/isolation.jpg", alt="")
+								.isolation-bot.tabs__content(data-id="3")
 									.isolation-info Предотвращение конденсации влаги на поверхности изолируемого оборудования или трубопровода
 									.isolation-row
 										.default-select
@@ -190,9 +257,133 @@ html(lang="ru")
 									.isolation-gallery
 										.isolation-gallery__img
 											img(src="img/photos/isolation.jpg", alt="")
-								.isolation-bot.tabs__content(data-id="2")
-									.isolation-info Предотвращение замерзания вещества
+									//- .isolation-info Предотвращение замерзания 
 
+									//- .isolation-results
+									//- 	.isolation-results__top
+									//- 		.title Результат
+									//- 	each item, i in [{title: "Тепловые потери согласно СП (Вт/м^2):", num: "17"}, {title: "Расчётные тепловые потери (Вт/м^2):", num: "13.3"}, {title: "T пов-ти внешнего слоя изоляции (°C):", num: "21.4"}, {title: "Допустимая T согласно СП (°C):", num: "55"}, {title: "Полные тепловые потери (Вт):", num: "55"}]
+									//- 		.isolation-results__row
+									//- 			.isolation-results__title=item.title
+									//- 			.isolation-results__num=item.num
+
+									//- .isolation-row
+									//- 	.default-select
+									//- 		.default-input__label Изоляция
+									//- 		select.default-select__select
+									//- 			option(value="1") PAROC Pro Slab 80
+									//- 			option(value="2") PAROC Pro Slab 20
+									//- 	.default-input
+									//- 		span мм
+									//- 		input.default-input__input(type="text" value="30")
+									//- 		label.default-input__label Толщина
+									//- 		.default-input__error
+									//- 			.error-text
+									//- 				<!-- текст ошибки -->
+									//- 	a(href="") Добавить слой
+
+
+									//- .isolation__sloy-cont
+									//- 	.isolation__sloy
+									//- 		.isolation__sloy-top
+									//- 			.isolation__sloy-el Изоляция
+									//- 			.isolation__sloy-el Толщина
+									//- 			.isolation__sloy-el Температура
+									//- 		.isolation__sloy-info
+									//- 			.isolation__sloy-row
+									//- 				.isolation__sloy-el PAROC Pro Wired Mat 80
+									//- 				.isolation__sloy-el 30 мм
+									//- 				.isolation__sloy-el 44.2 °C
+									//- 			.isolation__sloy-row
+									//- 				.isolation__sloy-el PAROC Pro Wired Mat 80
+									//- 				.isolation__sloy-el 30 мм
+									//- 				.isolation__sloy-el 44.2 °C
+									//- 			.isolation__sloy-row
+									//- 				.isolation__sloy-el PAROC Pro Wired Mat 80
+									//- 				.isolation__sloy-el 30 мм
+									//- 				.isolation__sloy-el 44.2 °C
+									//- 	.isolation__sloy-bot
+									//- 		a(href="").btn Удалить внешний слой
+									//- 		a(href="").btn Удалить все слой
+									//- 		input.default-btn(type="submit" value="Расчитать")
+
+									//- .isolation-gallery
+									//- 	.isolation-gallery__img
+									//- 		img(src="img/photos/isolation.jpg", alt="")
+								.isolation-bot.tabs__content(data-id="4")
+									.isolation-info Предотвращение конденсации влаги на поверхности изолируемого оборудования или трубопровода
+									.isolation-row
+										.default-select
+											.default-input__label Изоляция
+											select.default-select__select
+												option(value="1") PAROC Pro Slab 30
+												option(value="2") PAROC Pro Slab 20
+										.default-input
+											span %
+											input.default-input__input(type="text" value="70")
+											label.default-input__label Влажность
+											.default-input__error
+												.error-text
+													<!-- текст ошибки -->
+										a(href="") Посмотреть спецификацию
+									.isolation-gallery
+										.isolation-gallery__img
+											img(src="img/photos/isolation.jpg", alt="")
+									//- .isolation-info Предотвращение замерзания 
+
+									//- .isolation-results
+									//- 	.isolation-results__top
+									//- 		.title Результат
+									//- 	each item, i in [{title: "Тепловые потери согласно СП (Вт/м^2):", num: "17"}, {title: "Расчётные тепловые потери (Вт/м^2):", num: "13.3"}, {title: "T пов-ти внешнего слоя изоляции (°C):", num: "21.4"}, {title: "Допустимая T согласно СП (°C):", num: "55"}, {title: "Полные тепловые потери (Вт):", num: "55"}]
+									//- 		.isolation-results__row
+									//- 			.isolation-results__title=item.title
+									//- 			.isolation-results__num=item.num
+
+									//- .isolation-row
+									//- 	.default-select
+									//- 		.default-input__label Изоляция
+									//- 		select.default-select__select
+									//- 			option(value="1") PAROC Pro Slab 80
+									//- 			option(value="2") PAROC Pro Slab 20
+									//- 	.default-input
+									//- 		span мм
+									//- 		input.default-input__input(type="text" value="30")
+									//- 		label.default-input__label Толщина
+									//- 		.default-input__error
+									//- 			.error-text
+									//- 				<!-- текст ошибки -->
+									//- 	a(href="") Добавить слой
+
+
+									//- .isolation__sloy-cont
+									//- 	.isolation__sloy
+									//- 		.isolation__sloy-top
+									//- 			.isolation__sloy-el Изоляция
+									//- 			.isolation__sloy-el Толщина
+									//- 			.isolation__sloy-el Температура
+									//- 		.isolation__sloy-info
+									//- 			.isolation__sloy-row
+									//- 				.isolation__sloy-el PAROC Pro Wired Mat 80
+									//- 				.isolation__sloy-el 30 мм
+									//- 				.isolation__sloy-el 44.2 °C
+									//- 			.isolation__sloy-row
+									//- 				.isolation__sloy-el PAROC Pro Wired Mat 80
+									//- 				.isolation__sloy-el 30 мм
+									//- 				.isolation__sloy-el 44.2 °C
+									//- 			.isolation__sloy-row
+									//- 				.isolation__sloy-el PAROC Pro Wired Mat 80
+									//- 				.isolation__sloy-el 30 мм
+									//- 				.isolation__sloy-el 44.2 °C
+									//- 	.isolation__sloy-bot
+									//- 		a(href="").btn Удалить внешний слой
+									//- 		a(href="").btn Удалить все слой
+									//- 		input.default-btn(type="submit" value="Расчитать")
+
+									//- .isolation-gallery
+									//- 	.isolation-gallery__img
+									//- 		img(src="img/photos/isolation.jpg", alt="")
+								.isolation-bot.tabs__content(data-id="5")
+									.isolation-info Предотвращение замерзания вещества
 									.isolation-results
 										.isolation-results__top
 											.title Результат
@@ -218,116 +409,60 @@ html(lang="ru")
 									.isolation-gallery
 										.isolation-gallery__img
 											img(src="img/photos/isolation.jpg", alt="")
-								.isolation-bot.tabs__content(data-id="3")
-									.isolation-info Предотвращение замерзания 
-
-									.isolation-results
-										.isolation-results__top
-											.title Результат
-										each item, i in [{title: "Тепловые потери согласно СП (Вт/м^2):", num: "17"}, {title: "Расчётные тепловые потери (Вт/м^2):", num: "13.3"}, {title: "T пов-ти внешнего слоя изоляции (°C):", num: "21.4"}, {title: "Допустимая T согласно СП (°C):", num: "55"}, {title: "Полные тепловые потери (Вт):", num: "55"}]
-											.isolation-results__row
-												.isolation-results__title=item.title
-												.isolation-results__num=item.num
-
-									.isolation-row
-										.default-select
-											.default-input__label Изоляция
-											select.default-select__select
-												option(value="1") PAROC Pro Slab 80
-												option(value="2") PAROC Pro Slab 20
-										.default-input
-											span мм
-											input.default-input__input(type="text" value="30")
-											label.default-input__label Толщина
-											.default-input__error
-												.error-text
-													<!-- текст ошибки -->
-										a(href="") Добавить слой
-
-
-									.isolation__sloy-cont
-										.isolation__sloy
-											.isolation__sloy-top
-												.isolation__sloy-el Изоляция
-												.isolation__sloy-el Толщина
-												.isolation__sloy-el Температура
-											.isolation__sloy-info
-												.isolation__sloy-row
-													.isolation__sloy-el PAROC Pro Wired Mat 80
-													.isolation__sloy-el 30 мм
-													.isolation__sloy-el 44.2 °C
-												.isolation__sloy-row
-													.isolation__sloy-el PAROC Pro Wired Mat 80
-													.isolation__sloy-el 30 мм
-													.isolation__sloy-el 44.2 °C
-												.isolation__sloy-row
-													.isolation__sloy-el PAROC Pro Wired Mat 80
-													.isolation__sloy-el 30 мм
-													.isolation__sloy-el 44.2 °C
-										.isolation__sloy-bot
-											a(href="").btn Удалить внешний слой
-											a(href="").btn Удалить все слой
-											input.default-btn(type="submit" value="Расчитать")
-
-									.isolation-gallery
-										.isolation-gallery__img
-											img(src="img/photos/isolation.jpg", alt="")
-								.isolation-bot.tabs__content(data-id="4")
-									.isolation-info Предотвращение замерзания 
-
-									.isolation-results
-										.isolation-results__top
-											.title Результат
-										each item, i in [{title: "Тепловые потери согласно СП (Вт/м^2):", num: "17"}, {title: "Расчётные тепловые потери (Вт/м^2):", num: "13.3"}, {title: "T пов-ти внешнего слоя изоляции (°C):", num: "21.4"}, {title: "Допустимая T согласно СП (°C):", num: "55"}, {title: "Полные тепловые потери (Вт):", num: "55"}]
-											.isolation-results__row
-												.isolation-results__title=item.title
-												.isolation-results__num=item.num
-
-									.isolation-row
-										.default-select
-											.default-input__label Изоляция
-											select.default-select__select
-												option(value="1") PAROC Pro Slab 80
-												option(value="2") PAROC Pro Slab 20
-										.default-input
-											span мм
-											input.default-input__input(type="text" value="30")
-											label.default-input__label Толщина
-											.default-input__error
-												.error-text
-													<!-- текст ошибки -->
-										a(href="") Добавить слой
-
-
-									.isolation__sloy-cont
-										.isolation__sloy
-											.isolation__sloy-top
-												.isolation__sloy-el Изоляция
-												.isolation__sloy-el Толщина
-												.isolation__sloy-el Температура
-											.isolation__sloy-info
-												.isolation__sloy-row
-													.isolation__sloy-el PAROC Pro Wired Mat 80
-													.isolation__sloy-el 30 мм
-													.isolation__sloy-el 44.2 °C
-												.isolation__sloy-row
-													.isolation__sloy-el PAROC Pro Wired Mat 80
-													.isolation__sloy-el 30 мм
-													.isolation__sloy-el 44.2 °C
-												.isolation__sloy-row
-													.isolation__sloy-el PAROC Pro Wired Mat 80
-													.isolation__sloy-el 30 мм
-													.isolation__sloy-el 44.2 °C
-										.isolation__sloy-bot
-											a(href="").btn Удалить внешний слой
-											a(href="").btn Удалить все слой
-											input.default-btn(type="submit" value="Расчитать")
-
-									.isolation-gallery
-										.isolation-gallery__img
-											img(src="img/photos/isolation.jpg", alt="")
-								.isolation-bot.tabs__content(data-id="5")
 								.isolation-bot.tabs__content(data-id="6")
+									.isolation-info Предотвращение замерзания 
+
+									.isolation-results
+										.isolation-results__top
+											.title Результат
+										each item, i in [{title: "Тепловые потери согласно СП (Вт/м^2):", num: "17"}, {title: "Расчётные тепловые потери (Вт/м^2):", num: "13.3"}, {title: "T пов-ти внешнего слоя изоляции (°C):", num: "21.4"}, {title: "Допустимая T согласно СП (°C):", num: "55"}, {title: "Полные тепловые потери (Вт):", num: "55"}]
+											.isolation-results__row
+												.isolation-results__title=item.title
+												.isolation-results__num=item.num
+
+									.isolation-row
+										.default-select
+											.default-input__label Изоляция
+											select.default-select__select
+												option(value="1") PAROC Pro Slab 80
+												option(value="2") PAROC Pro Slab 20
+										.default-input
+											span мм
+											input.default-input__input(type="text" value="30")
+											label.default-input__label Толщина
+											.default-input__error
+												.error-text
+													<!-- текст ошибки -->
+										a(href="") Добавить слой
+
+
+									.isolation__sloy-cont
+										.isolation__sloy
+											.isolation__sloy-top
+												.isolation__sloy-el Изоляция
+												.isolation__sloy-el Толщина
+												.isolation__sloy-el Температура
+											.isolation__sloy-info
+												.isolation__sloy-row
+													.isolation__sloy-el PAROC Pro Wired Mat 80
+													.isolation__sloy-el 30 мм
+													.isolation__sloy-el 44.2 °C
+												.isolation__sloy-row
+													.isolation__sloy-el PAROC Pro Wired Mat 80
+													.isolation__sloy-el 30 мм
+													.isolation__sloy-el 44.2 °C
+												.isolation__sloy-row
+													.isolation__sloy-el PAROC Pro Wired Mat 80
+													.isolation__sloy-el 30 мм
+													.isolation__sloy-el 44.2 °C
+										.isolation__sloy-bot
+											a(href="").btn Удалить внешний слой
+											a(href="").btn Удалить все слой
+											input.default-btn(type="submit" value="Расчитать")
+
+									.isolation-gallery
+										.isolation-gallery__img
+											img(src="img/photos/isolation.jpg", alt="")
 
 							.results
 								.results-top
@@ -366,11 +501,6 @@ html(lang="ru")
 											.error-text
 												<!-- текст ошибки -->
 									input.default-btn(type="submit" value="Сохранить результат") 
-
-
-
-
-
 						.main-tabs__content(data-id="2")
 							.section
 								.section-top
@@ -429,7 +559,7 @@ html(lang="ru")
 
 									.characteristic__item
 										.characteristic__item-top
-											.characteristic__item-title Параметры трубы
+											.characteristic__item-title Параметры плоскости
 											.title-icon(style="color: #fee6e6; background-image: url('img/ico-pipe-2.png')")
 										.characteristic__item-filter
 											.default-select
@@ -443,15 +573,15 @@ html(lang="ru")
 													option(value="1") Без покровного слоя
 													option(value="2") Без покровного слоя 2
 											.default-input
-												span мм
+												span м
 												input.default-input__input(type="text" value="20")
-												label.default-input__label Внешний диаметр
+												label.default-input__label Ширина
 												.default-input__error
 													.error-text
 														<!-- текст ошибки -->
 											.default-input
 												span м
-												input.default-input__input(type="text" value="100")
+												input.default-input__input(type="text" value="50")
 												label.default-input__label Длинна
 												.default-input__error
 													.error-text
@@ -463,6 +593,10 @@ html(lang="ru")
 												.default-input__error
 													.error-text
 														<!-- текст ошибки -->
+											.default-input.default-input--checkbox
+												input.default-input__input--checkbox(type="checkbox" id="2904")
+												label.default-input__label--checkbox(for="2904") Наработка системы более 5000 часов
+
 									.characteristic__item.characteristic__item--dop
 										.characteristic__item-top
 											.characteristic__item-title Дополнительные параметры
@@ -503,14 +637,90 @@ html(lang="ru")
 									.title-icon(style="color: #e7faec; background-image: url('img/ico-isolation.png')")
 								.isolation-top
 									.tabs__tab(data-id="1").active СН
-									.tabs__tab(data-id="2") СТ
+									//- .tabs__tab(data-id="2") СТ
 									.tabs__tab(data-id="3") ТБ
 									.tabs__tab(data-id="4") ПК
-									.tabs__tab(data-id="5") З
+									//- .tabs__tab(data-id="5") З
 									.tabs__tab(data-id="6") Ручной расчет
 
 								.isolation-bot.tabs__content(data-id="1").active
-									.isolation-info Предотвращение замерзания вещества
+									.isolation-info Соблюдение норм плотности теплового потока (согласно СП 61.13330.2012,<br> актуализированная редакция СНиП 41-03-2003)
+									.isolation-results
+										.isolation-results__top
+											.title Результат
+										each item, i in [{title: "Точный расчет толщины изоляции (мм):", num: "17"}, {title: "Рекомендуемая толщина для выбранной изоляции (мм):", num: "13.3"}, {title: "Тепловые потери согласно СП (Вт/м)", num: "21.4"}, {title: "Допустимая температура внешнего слоя согласно СП (°C)", num: "55"}, {title: "Температура поверхности внешнего слоя изоляции (°C)", num: "55"}, ]
+											.isolation-results__row
+												.isolation-results__title=item.title
+												.isolation-results__num=item.num
+
+
+
+									.isolation-row
+										.default-select
+											.default-input__label Изоляция
+											select.default-select__select
+												option(value="1") PAROC Pro Wired Mat 80
+												option(value="2") PAROC Pro Wired Mat 90
+										
+										a(href="") Рассчитать
+									.isolation-gallery
+										.isolation-gallery__img
+											img(src="img/photos/isolation.jpg", alt="")
+									//- .isolation-info Предотвращение замерзания вещества
+
+									//- .isolation-results
+									//- 	.isolation-results__top
+									//- 		.title Результат
+									//- 	each item, i in [{title: "Точный расчет толщины изоляции (мм):", num: "17"}, {title: "Рекомендуемая толщина для выбранной изоляции (мм):", num: "13.3"}, {title: "Температура поверхности внешнего слоя изоляции °C", num: "21.4"}, {title: "Тепловые потери согласно СП (Вт/м)", num: "55"}, {title: "Расчетные тепловые потери (Вт/м)", num: "55"}, {title: "Допустимая температура внешнего слоя согласно СП (°C)", num: "55"}, ]
+									//- 		.isolation-results__row
+									//- 			.isolation-results__title=item.title
+									//- 			.isolation-results__num=item.num
+
+									//- .isolation-row
+									//- 	.default-select
+									//- 		.default-input__label Изоляция
+									//- 		select.default-select__select
+									//- 			option(value="1") PAROC Pro Slab 80
+									//- 			option(value="2") PAROC Pro Slab 20
+									//- 	.default-input
+									//- 		span ч
+									//- 		input.default-input__input(type="text" value="30")
+									//- 		label.default-input__label Время приостановки движения вещества
+									//- 		.default-input__error
+									//- 			.error-text
+									//- 				<!-- текст ошибки -->
+									//- 	a(href="") Расчитать
+									//- .isolation-gallery
+									//- 	.isolation-gallery__img
+									//- 		img(src="img/photos/isolation.jpg", alt="")
+
+								//- .isolation-bot.tabs__content(data-id="2")
+								.isolation-bot.tabs__content(data-id="3")
+									.isolation-info Соблюдение требований безопасности
+									.isolation-results
+										.isolation-results__top
+											.title Результат
+										each item, i in [{title: "Точный расчет толщины изоляции (мм):", num: "17"}, {title: "Рекомендуемая толщина для выбранной изоляции (мм):", num: "13.3"}, {title: "Тепловые потери согласно СП (Вт/м)", num: "21.4"}, {title: "Допустимая температура внешнего слоя согласно СП (°C)", num: "55"}, {title: "Расчетные тепловые потери (Вт/м^2)", num: "55"}, ]
+											.isolation-results__row
+												.isolation-results__title=item.title
+												.isolation-results__num=item.num
+
+
+
+									.isolation-row
+										.default-select
+											.default-input__label Изоляция
+											select.default-select__select
+												option(value="1") PAROC Pro Wired Mat 80
+												option(value="2") PAROC Pro Wired Mat 90
+										
+										a(href="") Рассчитать
+									.isolation-gallery
+										.isolation-gallery__img
+											img(src="img/photos/isolation.jpg", alt="")
+
+								.isolation-bot.tabs__content(data-id="4")
+									.isolation-info Предотвращение конденсации влаги на поверхности изолируемого оборудования<br> или трубопровода
 
 									.isolation-results
 										.isolation-results__top
@@ -524,25 +734,73 @@ html(lang="ru")
 										.default-select
 											.default-input__label Изоляция
 											select.default-select__select
-												option(value="1") PAROC Pro Slab 80
+												option(value="1") PAROC Pro Slab 30
 												option(value="2") PAROC Pro Slab 20
 										.default-input
-											span ч
-											input.default-input__input(type="text" value="30")
+											span %
+											input.default-input__input(type="text" value="70")
 											label.default-input__label Время приостановки движения вещества
 											.default-input__error
 												.error-text
 													<!-- текст ошибки -->
-										a(href="") Расчитать
+										a(href="") Рассчитать
 									.isolation-gallery
 										.isolation-gallery__img
 											img(src="img/photos/isolation.jpg", alt="")
-
-								.isolation-bot.tabs__content(data-id="2")
-								.isolation-bot.tabs__content(data-id="3")
-								.isolation-bot.tabs__content(data-id="4")
-								.isolation-bot.tabs__content(data-id="5")
+								//- .isolation-bot.tabs__content(data-id="5")
 								.isolation-bot.tabs__content(data-id="6")
+
+									.isolation-results
+										.isolation-results__top
+											.title Результат
+										each item, i in [{title: "Тепловые потери согласно СП (Вт/м^2):", num: "17"}, {title: "Расчётные тепловые потери (Вт/м^2):", num: "13.3"}, {title: "T пов-ти внешнего слоя изоляции (°C):", num: "21.4"}, {title: "Допустимая T согласно СП (°C):", num: "55"}, {title: "Полные тепловые потери (Вт):", num: "55"}]
+											.isolation-results__row
+												.isolation-results__title=item.title
+												.isolation-results__num=item.num
+
+									.isolation-row
+										.default-select
+											.default-input__label Изоляция
+											select.default-select__select
+												option(value="1") PAROC Pro Slab 80
+												option(value="2") PAROC Pro Slab 20
+										.default-input
+											span мм
+											input.default-input__input(type="text" value="30")
+											label.default-input__label Толщина
+											.default-input__error
+												.error-text
+													<!-- текст ошибки -->
+										a(href="") Добавить слой
+
+
+									.isolation__sloy-cont
+										.isolation__sloy
+											.isolation__sloy-top
+												.isolation__sloy-el Изоляция
+												.isolation__sloy-el Толщина
+												.isolation__sloy-el Температура
+											.isolation__sloy-info
+												.isolation__sloy-row
+													.isolation__sloy-el PAROC Pro Wired Mat 80
+													.isolation__sloy-el 30 мм
+													.isolation__sloy-el 44.2 °C
+												.isolation__sloy-row
+													.isolation__sloy-el PAROC Pro Wired Mat 80
+													.isolation__sloy-el 30 мм
+													.isolation__sloy-el 44.2 °C
+												.isolation__sloy-row
+													.isolation__sloy-el PAROC Pro Wired Mat 80
+													.isolation__sloy-el 30 мм
+													.isolation__sloy-el 44.2 °C
+										.isolation__sloy-bot
+											a(href="").btn Удалить внешний слой
+											a(href="").btn Удалить все слой
+											input.default-btn(type="submit" value="Расчитать")
+
+									.isolation-gallery
+										.isolation-gallery__img
+											img(src="img/photos/isolation.jpg", alt="")
 
 							.results
 								.results-top
@@ -608,6 +866,11 @@ html(lang="ru")
 													option(value="1") Европейская часть россии
 													option(value="2") Урал
 											.default-select
+												.default-input__label Внешняя среда
+												select.default-select__select
+													option(value="1") Открытая среда
+													option(value="2") Открытая среда 2
+											.default-select
 												.default-input__label Теплоноситель
 												select.default-select__select
 													option(value="1") Вода
@@ -636,7 +899,7 @@ html(lang="ru")
 
 									.characteristic__item
 										.characteristic__item-top
-											.characteristic__item-title Параметры трубы
+											.characteristic__item-title Параметры емкости
 											.title-icon(style="color: #fee6e6; background-image: url('img/ico-pipe-2.png')")
 										.characteristic__item-filter
 											.default-select
@@ -644,48 +907,239 @@ html(lang="ru")
 												select.default-select__select
 													option(value="1") Металл
 													option(value="2") Пластик
+											.default-input--row
+												.default-input
+													span мм
+													input.default-input__input(type="number" value="3" min="1" max="100" step="1")
+													.default-input__label Толщина стенки
+													.default-input__error
+														.error-text
+															<!-- текст ошибки -->
+												.default-input
+													span кг/м3
+													input.default-input__input(type="number" value="20" min="1" max="100" step="1")
+													.default-input__label Плотность материала<br> стенки
+													.default-input__error
+														.error-text
+															<!-- текст ошибки -->
+											.default-input
+												span кДж/(кг °C)
+												input.default-input__input(type="number" value="50" min="1" max="100" step="1")
+												.default-input__label Теплоёмкость материала<br> стенки
+												.default-input__error
+													.error-text
+														<!-- текст ошибки -->
+
+											.default-input--row
+												.default-input
+													span м/c
+													input.default-input__input(type="text" value="3")
+													label.default-input__label высота
+													.default-input__error
+														.error-text
+															<!-- текст ошибки -->
+
+												.default-input
+													span м/c
+													input.default-input__input(type="text" value="3")
+													label.default-input__label Диаметр
+													.default-input__error
+														.error-text
+															<!-- текст ошибки -->
+
 											.default-select
 												.default-input__label Внешнее покрытие
 												select.default-select__select
 													option(value="1") Без покровного слоя
 													option(value="2") Без покровного слоя 2
-											.default-input
-												span мм
-												input.default-input__input(type="text" value="20")
-												label.default-input__label Внешний диаметр
-												.default-input__error
-													.error-text
-														<!-- текст ошибки -->
-											.default-input
-												span м
-												input.default-input__input(type="text" value="100")
-												label.default-input__label Длинна
-												.default-input__error
-													.error-text
-														<!-- текст ошибки -->
-											.default-input
-												span мм
-												input.default-input__input(type="text" value="3")
-												label.default-input__label Толщина стенки
-												.default-input__error
-													.error-text
-														<!-- текст ошибки -->
+											.default-input.default-input--checkbox
+												input.default-input__input--checkbox(type="checkbox" id="2901" checked)
+												label.default-input__label--checkbox(for="2901") Наработка системы более 5000 часов
+											.default-input.default-input--checkbox
+												input.default-input__input--checkbox(type="checkbox" id="2902" checked)
+												label.default-input__label--checkbox(for="2902") Учитывать изоляцию днища
+											
 									
 							
 							.isolation.tabs
+
 								.isolation-head
 									.title Изоляция
 									.title-icon(style="color: #e7faec; background-image: url('img/ico-isolation.png')")
-								.isolation-top.tabs
+								.isolation-top
 									.tabs__tab(data-id="1").active СН
 									.tabs__tab(data-id="2") СТ
 									.tabs__tab(data-id="3") ТБ
 									.tabs__tab(data-id="4") ПК
-									.tabs__tab(data-id="5") З
 									.tabs__tab(data-id="6") Ручной расчет
 
 								.isolation-bot.tabs__content(data-id="1").active
-									.isolation-info Предотвращение замерзания 
+
+									.isolation-info Соблюдение норм плотности теплового потока (согласно СП 61.13330.2012,<br> актуализированная редакция СНиП 41-03-2003)
+									.isolation-results
+										.isolation-results__top
+											.title Результат
+										each item, i in [{title: "Точный расчет толщины изоляции (мм):", num: "17"}, {title: "Рекомендуемая толщина для выбранной изоляции (мм):", num: "13.3"}, {title: "Тепловые потери согласно СП (Вт/м)", num: "21.4"}, {title: "Допустимая температура внешнего слоя согласно СП (°C)", num: "55"}, {title: "Температура поверхности внешнего слоя изоляции (°C)", num: "55"}, ]
+											.isolation-results__row
+												.isolation-results__title=item.title
+												.isolation-results__num=item.num
+
+
+
+									.isolation-row
+										.default-select
+											.default-input__label Изоляция
+											select.default-select__select
+												option(value="1") PAROC Pro Wired Mat 80
+												option(value="2") PAROC Pro Wired Mat 90
+										
+										a(href="") Рассчитать
+									.isolation-gallery
+										.isolation-gallery__img
+											img(src="img/photos/isolation.jpg", alt="")
+									//- .isolation-info Предотвращение замерзания 
+
+									//- .isolation-results
+									//- 	.isolation-results__top
+									//- 		.title Результат
+									//- 	each item, i in [{title: "Тепловые потери согласно СП (Вт/м^2):", num: "17"}, {title: "Расчётные тепловые потери (Вт/м^2):", num: "13.3"}, {title: "T пов-ти внешнего слоя изоляции (°C):", num: "21.4"}, {title: "Допустимая T согласно СП (°C):", num: "55"}, {title: "Полные тепловые потери (Вт):", num: "55"}]
+									//- 		.isolation-results__row
+									//- 			.isolation-results__title=item.title
+									//- 			.isolation-results__num=item.num
+
+									//- .isolation-row
+									//- 	.default-select
+									//- 		.default-input__label Изоляция
+									//- 		select.default-select__select
+									//- 			option(value="1") PAROC Pro Slab 80
+									//- 			option(value="2") PAROC Pro Slab 20
+									//- 	.default-input
+									//- 		span мм
+									//- 		input.default-input__input(type="text" value="30")
+									//- 		label.default-input__label Толщина
+									//- 		.default-input__error
+									//- 			.error-text
+									//- 				<!-- текст ошибки -->
+									//- 	a(href="") Добавить слой
+
+
+									//- .isolation__sloy-cont
+									//- 	.isolation__sloy
+									//- 		.isolation__sloy-top
+									//- 			.isolation__sloy-el Изоляция
+									//- 			.isolation__sloy-el Толщина
+									//- 			.isolation__sloy-el Температура
+									//- 		.isolation__sloy-info
+									//- 			.isolation__sloy-row
+									//- 				.isolation__sloy-el PAROC Pro Wired Mat 80
+									//- 				.isolation__sloy-el 30 мм
+									//- 				.isolation__sloy-el 44.2 °C
+									//- 			.isolation__sloy-row
+									//- 				.isolation__sloy-el PAROC Pro Wired Mat 80
+									//- 				.isolation__sloy-el 30 мм
+									//- 				.isolation__sloy-el 44.2 °C
+									//- 			.isolation__sloy-row
+									//- 				.isolation__sloy-el PAROC Pro Wired Mat 80
+									//- 				.isolation__sloy-el 30 мм
+									//- 				.isolation__sloy-el 44.2 °C
+									//- 	.isolation__sloy-bot
+									//- 		a(href="").btn Удалить внешний слой
+									//- 		a(href="").btn Удалить все слой
+									//- 		input.default-btn(type="submit" value="Расчитать")
+
+									//- .isolation-gallery
+									//- 	.isolation-gallery__img
+									//- 		img(src="img/photos/isolation.jpg", alt="")
+								.isolation-bot.tabs__content(data-id="2")
+									.isolation-info Расчет толщины изоляции по заданному снижению (повышению) температуры<br> вещества, хранимого в емкости
+									.isolation-results
+										.isolation-results__top
+											.title Результат
+										each item, i in [{title: "Точный расчет толщины изоляции (мм):", num: "17"}, {title: "Рекомендуемая толщина для выбранной изоляции (мм):", num: "13.3"}, {title: "температура поверхности внешнего слоя изоляции (°C):", num: "13.3"}, {title: "Тепловые потери согласно СП (Вт/м):", num: "21.4"}, {title: "Расчетные тепловые потери (Вт/м):", num: "55"}, {title: "Полные тепловые потери (Вт):", num: "55"}]
+											.isolation-results__row
+												.isolation-results__title=item.title
+												.isolation-results__num=item.num
+
+
+									.isolation-row
+										.default-select
+											.default-input__label Изоляция
+											select.default-select__select
+												option(value="1") PAROC Pro Slab 30
+												option(value="2") PAROC Pro Slab 20
+
+										a(href="") Рассчитать
+									.isolation-row
+										.default-input
+											span °C
+											input.default-input__input(type="number" value="20" min="1" max="100" step="1")
+											.default-input__label Конечная температура вещества
+											.default-input__error
+												.error-text
+													<!-- текст ошибки -->
+										.default-input
+											span ч
+											input.default-input__input(type="number" value="20" min="1" max="100" step="1")
+											.default-input__label Время хранения
+											.default-input__error
+												.error-text
+													<!-- текст ошибки -->
+
+
+									.isolation-gallery
+										.isolation-gallery__img
+											img(src="img/photos/isolation.jpg", alt="")
+
+								.isolation-bot.tabs__content(data-id="3")
+									.isolation-info Соблюдение требований безопасности
+									.isolation-results
+										.isolation-results__top
+											.title Результат
+										each item, i in [{title: "Точный расчет толщины изоляции (мм):", num: "17"}, {title: "Рекомендуемая толщина для выбранной изоляции (мм):", num: "13.3"}, {title: "Допустимая температура внешнего слоя СП (°C)", num: "21.4"}, {title: "Полные тепловые потери (Вт)", num: "21.4"}, {title: "Тепловые потери согласно СП (Вт/м)", num: "55"}, {title: "Расчетные тепловые потери (Вт/м^2)", num: "55"} ]
+											.isolation-results__row
+												.isolation-results__title=item.title
+												.isolation-results__num=item.num
+									.isolation-row
+										.default-select
+											.default-input__label Изоляция
+											select.default-select__select
+												option(value="1") PAROC Pro Slab 30
+												option(value="2") PAROC Pro Wired Mat 90
+										
+										a(href="") Посмотреть спецификацию
+									.isolation-gallery
+										.isolation-gallery__img
+											img(src="img/photos/isolation.jpg", alt="")
+								.isolation-bot.tabs__content(data-id="4")
+
+									.isolation-info Предотвращение конденсации влаги на поверхности изолируемого оборудования<br> или трубопровода
+
+									.isolation-results
+										.isolation-results__top
+											.title Результат
+										each item, i in [{title: "Точный расчет толщины изоляции (мм):", num: "17"}, {title: "Рекомендуемая толщина для выбранной изоляции (мм):", num: "13.3"}, {title: "Полные тепловые потери (Вт)", num: "21.4"}, {title: "Расчетные тепловые потери (Вт/м^2)", num: "55"}, {title: "Тепловые потери согласно СП (Вт/м^2)", num: "55"}, {title: "Допустимая температура внешнего слоя согласно СП (°C)", num: "55"} ]
+											.isolation-results__row
+												.isolation-results__title=item.title
+												.isolation-results__num=item.num
+
+									.isolation-row
+										.default-select
+											.default-input__label Изоляция
+											select.default-select__select
+												option(value="1") PAROC Pro Slab 30
+												option(value="2") PAROC Pro Slab 20
+										.default-input
+											span %
+											input.default-input__input(type="text" value="70")
+											label.default-input__label Влажность
+											.default-input__error
+												.error-text
+													<!-- текст ошибки -->
+										a(href="") Рассчитать
+									.isolation-gallery
+										.isolation-gallery__img
+											img(src="img/photos/isolation.jpg", alt="")
+								.isolation-bot.tabs__content(data-id="6")
 
 									.isolation-results
 										.isolation-results__top
@@ -699,7 +1153,7 @@ html(lang="ru")
 										.default-select
 											.default-input__label Изоляция
 											select.default-select__select
-												option(value="1") PAROC Pro Slab 80
+												option(value="1") PAROC Pro Wired Mat 80
 												option(value="2") PAROC Pro Slab 20
 										.default-input
 											span мм
@@ -738,12 +1192,6 @@ html(lang="ru")
 									.isolation-gallery
 										.isolation-gallery__img
 											img(src="img/photos/isolation.jpg", alt="")
-
-								.isolation-bot.tabs__content(data-id="2")
-								.isolation-bot.tabs__content(data-id="3")
-								.isolation-bot.tabs__content(data-id="4")
-								.isolation-bot.tabs__content(data-id="5")
-								.isolation-bot.tabs__content(data-id="6")
 
 							.results
 								.results-top

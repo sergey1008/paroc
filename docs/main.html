@@ -211,6 +211,50 @@
                   <div class="tabs__tab" data-id="6">Ручной расчет</div>
                 </div>
                 <div class="isolation-bot tabs__content active" data-id="1">
+                  <div class="isolation-info">Соблюдение норм плотности теплового потока (согласно СП 61.13330.2012,<br> актуализированная редакция СНиП 41-03-2003)</div>
+                  <div class="isolation-row">
+                    <div class="default-select">
+                      <div class="default-input__label">Изоляция</div>
+                      <select class="default-select__select">
+                        <option value="1">PAROC Pro Wired Mat 80</option>
+                        <option value="2">PAROC Pro Wired Mat 90</option>
+                      </select>
+                    </div><a href="">Посмотреть спецификацию</a>
+                  </div>
+                  <div class="isolation-gallery">
+                    <div class="isolation-gallery__img"><img src="img/photos/isolation.jpg" alt=""/></div>
+                  </div>
+                </div>
+                <div class="isolation-bot tabs__content" data-id="2">
+                  <div class="isolation-info">Расчет толщины изоляции по заданному снижению (повышению) температуры вещества, хранимого в емкости</div>
+                  <div class="isolation-row">
+                    <div class="default-select">
+                      <div class="default-input__label">Изоляция</div>
+                      <select class="default-select__select">
+                        <option value="1">PAROC Pro Slab 30</option>
+                        <option value="2">PAROC Pro Slab 20</option>
+                      </select>
+                    </div>
+                    <div class="default-input"><span>°C</span>
+                      <input class="default-input__input" type="text" value="60"/>
+                      <label class="default-input__label">Конечная температура вещества</label>
+                      <div class="default-input__error">
+                        <div class="error-text"><!-- текст ошибки --></div>
+                      </div>
+                    </div>
+                    <div class="default-input"><span>ч</span>
+                      <input class="default-input__input" type="text" value="40"/>
+                      <label class="default-input__label">Время хранения</label>
+                      <div class="default-input__error">
+                        <div class="error-text"><!-- текст ошибки --></div>
+                      </div>
+                    </div><a href="">Посмотреть спецификацию</a>
+                  </div>
+                  <div class="isolation-gallery">
+                    <div class="isolation-gallery__img"><img src="img/photos/isolation.jpg" alt=""/></div>
+                  </div>
+                </div>
+                <div class="isolation-bot tabs__content" data-id="3">
                   <div class="isolation-info">Предотвращение конденсации влаги на поверхности изолируемого оборудования или трубопровода</div>
                   <div class="isolation-row">
                     <div class="default-select">
@@ -232,7 +276,29 @@
                     <div class="isolation-gallery__img"><img src="img/photos/isolation.jpg" alt=""/></div>
                   </div>
                 </div>
-                <div class="isolation-bot tabs__content" data-id="2">
+                <div class="isolation-bot tabs__content" data-id="4">
+                  <div class="isolation-info">Предотвращение конденсации влаги на поверхности изолируемого оборудования или трубопровода</div>
+                  <div class="isolation-row">
+                    <div class="default-select">
+                      <div class="default-input__label">Изоляция</div>
+                      <select class="default-select__select">
+                        <option value="1">PAROC Pro Slab 30</option>
+                        <option value="2">PAROC Pro Slab 20</option>
+                      </select>
+                    </div>
+                    <div class="default-input"><span>%</span>
+                      <input class="default-input__input" type="text" value="70"/>
+                      <label class="default-input__label">Влажность</label>
+                      <div class="default-input__error">
+                        <div class="error-text"><!-- текст ошибки --></div>
+                      </div>
+                    </div><a href="">Посмотреть спецификацию</a>
+                  </div>
+                  <div class="isolation-gallery">
+                    <div class="isolation-gallery__img"><img src="img/photos/isolation.jpg" alt=""/></div>
+                  </div>
+                </div>
+                <div class="isolation-bot tabs__content" data-id="5">
                   <div class="isolation-info">Предотвращение замерзания вещества</div>
                   <div class="isolation-results">
                     <div class="isolation-results__top">
@@ -283,7 +349,7 @@
                     <div class="isolation-gallery__img"><img src="img/photos/isolation.jpg" alt=""/></div>
                   </div>
                 </div>
-                <div class="isolation-bot tabs__content" data-id="3">
+                <div class="isolation-bot tabs__content" data-id="6">
                   <div class="isolation-info">Предотвращение замерзания </div>
                   <div class="isolation-results">
                     <div class="isolation-results__top">
@@ -359,84 +425,6 @@
                     <div class="isolation-gallery__img"><img src="img/photos/isolation.jpg" alt=""/></div>
                   </div>
                 </div>
-                <div class="isolation-bot tabs__content" data-id="4">
-                  <div class="isolation-info">Предотвращение замерзания </div>
-                  <div class="isolation-results">
-                    <div class="isolation-results__top">
-                      <div class="title">Результат</div>
-                    </div>
-                    <div class="isolation-results__row">
-                      <div class="isolation-results__title">Тепловые потери согласно СП (Вт/м^2):</div>
-                      <div class="isolation-results__num">17</div>
-                    </div>
-                    <div class="isolation-results__row">
-                      <div class="isolation-results__title">Расчётные тепловые потери (Вт/м^2):</div>
-                      <div class="isolation-results__num">13.3</div>
-                    </div>
-                    <div class="isolation-results__row">
-                      <div class="isolation-results__title">T пов-ти внешнего слоя изоляции (°C):</div>
-                      <div class="isolation-results__num">21.4</div>
-                    </div>
-                    <div class="isolation-results__row">
-                      <div class="isolation-results__title">Допустимая T согласно СП (°C):</div>
-                      <div class="isolation-results__num">55</div>
-                    </div>
-                    <div class="isolation-results__row">
-                      <div class="isolation-results__title">Полные тепловые потери (Вт):</div>
-                      <div class="isolation-results__num">55</div>
-                    </div>
-                  </div>
-                  <div class="isolation-row">
-                    <div class="default-select">
-                      <div class="default-input__label">Изоляция</div>
-                      <select class="default-select__select">
-                        <option value="1">PAROC Pro Slab 80</option>
-                        <option value="2">PAROC Pro Slab 20</option>
-                      </select>
-                    </div>
-                    <div class="default-input"><span>мм</span>
-                      <input class="default-input__input" type="text" value="30"/>
-                      <label class="default-input__label">Толщина</label>
-                      <div class="default-input__error">
-                        <div class="error-text"><!-- текст ошибки --></div>
-                      </div>
-                    </div><a href="">Добавить слой</a>
-                  </div>
-                  <div class="isolation__sloy-cont">
-                    <div class="isolation__sloy">
-                      <div class="isolation__sloy-top">
-                        <div class="isolation__sloy-el">Изоляция</div>
-                        <div class="isolation__sloy-el">Толщина</div>
-                        <div class="isolation__sloy-el">Температура</div>
-                      </div>
-                      <div class="isolation__sloy-info">
-                        <div class="isolation__sloy-row">
-                          <div class="isolation__sloy-el">PAROC Pro Wired Mat 80</div>
-                          <div class="isolation__sloy-el">30 мм</div>
-                          <div class="isolation__sloy-el">44.2 °C</div>
-                        </div>
-                        <div class="isolation__sloy-row">
-                          <div class="isolation__sloy-el">PAROC Pro Wired Mat 80</div>
-                          <div class="isolation__sloy-el">30 мм</div>
-                          <div class="isolation__sloy-el">44.2 °C</div>
-                        </div>
-                        <div class="isolation__sloy-row">
-                          <div class="isolation__sloy-el">PAROC Pro Wired Mat 80</div>
-                          <div class="isolation__sloy-el">30 мм</div>
-                          <div class="isolation__sloy-el">44.2 °C</div>
-                        </div>
-                      </div>
-                    </div>
-                    <div class="isolation__sloy-bot"><a class="btn" href="">Удалить внешний слой</a><a class="btn" href="">Удалить все слой</a>
-                      <input class="default-btn" type="submit" value="Расчитать"/>
-                    </div>
-                  </div>
-                  <div class="isolation-gallery">
-                    <div class="isolation-gallery__img"><img src="img/photos/isolation.jpg" alt=""/></div>
-                  </div>
-                </div>
-                <div class="isolation-bot tabs__content" data-id="5"></div>
-                <div class="isolation-bot tabs__content" data-id="6"></div>
               </div>
               <div class="results">
                 <div class="results-top">
@@ -565,7 +553,7 @@
                   </div>
                   <div class="characteristic__item">
                     <div class="characteristic__item-top">
-                      <div class="characteristic__item-title">Параметры трубы</div>
+                      <div class="characteristic__item-title">Параметры плоскости</div>
                       <div class="title-icon" style="color: #fee6e6; background-image: url('img/ico-pipe-2.png')"></div>
                     </div>
                     <div class="characteristic__item-filter">
@@ -583,15 +571,15 @@
                           <option value="2">Без покровного слоя 2</option>
                         </select>
                       </div>
-                      <div class="default-input"><span>мм</span>
+                      <div class="default-input"><span>м</span>
                         <input class="default-input__input" type="text" value="20"/>
-                        <label class="default-input__label">Внешний диаметр</label>
+                        <label class="default-input__label">Ширина</label>
                         <div class="default-input__error">
                           <div class="error-text"><!-- текст ошибки --></div>
                         </div>
                       </div>
                       <div class="default-input"><span>м</span>
-                        <input class="default-input__input" type="text" value="100"/>
+                        <input class="default-input__input" type="text" value="50"/>
                         <label class="default-input__label">Длинна</label>
                         <div class="default-input__error">
                           <div class="error-text"><!-- текст ошибки --></div>
@@ -603,6 +591,10 @@
                         <div class="default-input__error">
                           <div class="error-text"><!-- текст ошибки --></div>
                         </div>
+                      </div>
+                      <div class="default-input default-input--checkbox">
+                        <input class="default-input__input--checkbox" type="checkbox" id="2904"/>
+                        <label class="default-input__label--checkbox" for="2904">Наработка системы более 5000 часов</label>
                       </div>
                     </div>
                   </div>
@@ -656,14 +648,92 @@
                 </div>
                 <div class="isolation-top">
                   <div class="tabs__tab active" data-id="1">СН</div>
-                  <div class="tabs__tab" data-id="2">СТ</div>
                   <div class="tabs__tab" data-id="3">ТБ</div>
                   <div class="tabs__tab" data-id="4">ПК</div>
-                  <div class="tabs__tab" data-id="5">З</div>
                   <div class="tabs__tab" data-id="6">Ручной расчет</div>
                 </div>
                 <div class="isolation-bot tabs__content active" data-id="1">
-                  <div class="isolation-info">Предотвращение замерзания вещества</div>
+                  <div class="isolation-info">Соблюдение норм плотности теплового потока (согласно СП 61.13330.2012,<br> актуализированная редакция СНиП 41-03-2003)</div>
+                  <div class="isolation-results">
+                    <div class="isolation-results__top">
+                      <div class="title">Результат</div>
+                    </div>
+                    <div class="isolation-results__row">
+                      <div class="isolation-results__title">Точный расчет толщины изоляции (мм):</div>
+                      <div class="isolation-results__num">17</div>
+                    </div>
+                    <div class="isolation-results__row">
+                      <div class="isolation-results__title">Рекомендуемая толщина для выбранной изоляции (мм):</div>
+                      <div class="isolation-results__num">13.3</div>
+                    </div>
+                    <div class="isolation-results__row">
+                      <div class="isolation-results__title">Тепловые потери согласно СП (Вт/м)</div>
+                      <div class="isolation-results__num">21.4</div>
+                    </div>
+                    <div class="isolation-results__row">
+                      <div class="isolation-results__title">Допустимая температура внешнего слоя согласно СП (°C)</div>
+                      <div class="isolation-results__num">55</div>
+                    </div>
+                    <div class="isolation-results__row">
+                      <div class="isolation-results__title">Температура поверхности внешнего слоя изоляции (°C)</div>
+                      <div class="isolation-results__num">55</div>
+                    </div>
+                  </div>
+                  <div class="isolation-row">
+                    <div class="default-select">
+                      <div class="default-input__label">Изоляция</div>
+                      <select class="default-select__select">
+                        <option value="1">PAROC Pro Wired Mat 80</option>
+                        <option value="2">PAROC Pro Wired Mat 90</option>
+                      </select>
+                    </div><a href="">Рассчитать</a>
+                  </div>
+                  <div class="isolation-gallery">
+                    <div class="isolation-gallery__img"><img src="img/photos/isolation.jpg" alt=""/></div>
+                  </div>
+                </div>
+                <div class="isolation-bot tabs__content" data-id="3">
+                  <div class="isolation-info">Соблюдение требований безопасности</div>
+                  <div class="isolation-results">
+                    <div class="isolation-results__top">
+                      <div class="title">Результат</div>
+                    </div>
+                    <div class="isolation-results__row">
+                      <div class="isolation-results__title">Точный расчет толщины изоляции (мм):</div>
+                      <div class="isolation-results__num">17</div>
+                    </div>
+                    <div class="isolation-results__row">
+                      <div class="isolation-results__title">Рекомендуемая толщина для выбранной изоляции (мм):</div>
+                      <div class="isolation-results__num">13.3</div>
+                    </div>
+                    <div class="isolation-results__row">
+                      <div class="isolation-results__title">Тепловые потери согласно СП (Вт/м)</div>
+                      <div class="isolation-results__num">21.4</div>
+                    </div>
+                    <div class="isolation-results__row">
+                      <div class="isolation-results__title">Допустимая температура внешнего слоя согласно СП (°C)</div>
+                      <div class="isolation-results__num">55</div>
+                    </div>
+                    <div class="isolation-results__row">
+                      <div class="isolation-results__title">Расчетные тепловые потери (Вт/м^2)</div>
+                      <div class="isolation-results__num">55</div>
+                    </div>
+                  </div>
+                  <div class="isolation-row">
+                    <div class="default-select">
+                      <div class="default-input__label">Изоляция</div>
+                      <select class="default-select__select">
+                        <option value="1">PAROC Pro Wired Mat 80</option>
+                        <option value="2">PAROC Pro Wired Mat 90</option>
+                      </select>
+                    </div><a href="">Рассчитать</a>
+                  </div>
+                  <div class="isolation-gallery">
+                    <div class="isolation-gallery__img"><img src="img/photos/isolation.jpg" alt=""/></div>
+                  </div>
+                </div>
+                <div class="isolation-bot tabs__content" data-id="4">
+                  <div class="isolation-info">Предотвращение конденсации влаги на поверхности изолируемого оборудования<br> или трубопровода</div>
                   <div class="isolation-results">
                     <div class="isolation-results__top">
                       <div class="title">Результат</div>
@@ -697,27 +767,97 @@
                     <div class="default-select">
                       <div class="default-input__label">Изоляция</div>
                       <select class="default-select__select">
-                        <option value="1">PAROC Pro Slab 80</option>
+                        <option value="1">PAROC Pro Slab 30</option>
                         <option value="2">PAROC Pro Slab 20</option>
                       </select>
                     </div>
-                    <div class="default-input"><span>ч</span>
-                      <input class="default-input__input" type="text" value="30"/>
+                    <div class="default-input"><span>%</span>
+                      <input class="default-input__input" type="text" value="70"/>
                       <label class="default-input__label">Время приостановки движения вещества</label>
                       <div class="default-input__error">
                         <div class="error-text"><!-- текст ошибки --></div>
                       </div>
-                    </div><a href="">Расчитать</a>
+                    </div><a href="">Рассчитать</a>
                   </div>
                   <div class="isolation-gallery">
                     <div class="isolation-gallery__img"><img src="img/photos/isolation.jpg" alt=""/></div>
                   </div>
                 </div>
-                <div class="isolation-bot tabs__content" data-id="2"></div>
-                <div class="isolation-bot tabs__content" data-id="3"></div>
-                <div class="isolation-bot tabs__content" data-id="4"></div>
-                <div class="isolation-bot tabs__content" data-id="5"></div>
-                <div class="isolation-bot tabs__content" data-id="6"></div>
+                <div class="isolation-bot tabs__content" data-id="6">
+                  <div class="isolation-results">
+                    <div class="isolation-results__top">
+                      <div class="title">Результат</div>
+                    </div>
+                    <div class="isolation-results__row">
+                      <div class="isolation-results__title">Тепловые потери согласно СП (Вт/м^2):</div>
+                      <div class="isolation-results__num">17</div>
+                    </div>
+                    <div class="isolation-results__row">
+                      <div class="isolation-results__title">Расчётные тепловые потери (Вт/м^2):</div>
+                      <div class="isolation-results__num">13.3</div>
+                    </div>
+                    <div class="isolation-results__row">
+                      <div class="isolation-results__title">T пов-ти внешнего слоя изоляции (°C):</div>
+                      <div class="isolation-results__num">21.4</div>
+                    </div>
+                    <div class="isolation-results__row">
+                      <div class="isolation-results__title">Допустимая T согласно СП (°C):</div>
+                      <div class="isolation-results__num">55</div>
+                    </div>
+                    <div class="isolation-results__row">
+                      <div class="isolation-results__title">Полные тепловые потери (Вт):</div>
+                      <div class="isolation-results__num">55</div>
+                    </div>
+                  </div>
+                  <div class="isolation-row">
+                    <div class="default-select">
+                      <div class="default-input__label">Изоляция</div>
+                      <select class="default-select__select">
+                        <option value="1">PAROC Pro Slab 80</option>
+                        <option value="2">PAROC Pro Slab 20</option>
+                      </select>
+                    </div>
+                    <div class="default-input"><span>мм</span>
+                      <input class="default-input__input" type="text" value="30"/>
+                      <label class="default-input__label">Толщина</label>
+                      <div class="default-input__error">
+                        <div class="error-text"><!-- текст ошибки --></div>
+                      </div>
+                    </div><a href="">Добавить слой</a>
+                  </div>
+                  <div class="isolation__sloy-cont">
+                    <div class="isolation__sloy">
+                      <div class="isolation__sloy-top">
+                        <div class="isolation__sloy-el">Изоляция</div>
+                        <div class="isolation__sloy-el">Толщина</div>
+                        <div class="isolation__sloy-el">Температура</div>
+                      </div>
+                      <div class="isolation__sloy-info">
+                        <div class="isolation__sloy-row">
+                          <div class="isolation__sloy-el">PAROC Pro Wired Mat 80</div>
+                          <div class="isolation__sloy-el">30 мм</div>
+                          <div class="isolation__sloy-el">44.2 °C</div>
+                        </div>
+                        <div class="isolation__sloy-row">
+                          <div class="isolation__sloy-el">PAROC Pro Wired Mat 80</div>
+                          <div class="isolation__sloy-el">30 мм</div>
+                          <div class="isolation__sloy-el">44.2 °C</div>
+                        </div>
+                        <div class="isolation__sloy-row">
+                          <div class="isolation__sloy-el">PAROC Pro Wired Mat 80</div>
+                          <div class="isolation__sloy-el">30 мм</div>
+                          <div class="isolation__sloy-el">44.2 °C</div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="isolation__sloy-bot"><a class="btn" href="">Удалить внешний слой</a><a class="btn" href="">Удалить все слой</a>
+                      <input class="default-btn" type="submit" value="Расчитать"/>
+                    </div>
+                  </div>
+                  <div class="isolation-gallery">
+                    <div class="isolation-gallery__img"><img src="img/photos/isolation.jpg" alt=""/></div>
+                  </div>
+                </div>
               </div>
               <div class="results">
                 <div class="results-top">
@@ -813,6 +953,13 @@
                         </select>
                       </div>
                       <div class="default-select">
+                        <div class="default-input__label">Внешняя среда</div>
+                        <select class="default-select__select">
+                          <option value="1">Открытая среда</option>
+                          <option value="2">Открытая среда 2</option>
+                        </select>
+                      </div>
+                      <div class="default-select">
                         <div class="default-input__label">Теплоноситель</div>
                         <select class="default-select__select">
                           <option value="1">Вода</option>
@@ -844,7 +991,7 @@
                   </div>
                   <div class="characteristic__item">
                     <div class="characteristic__item-top">
-                      <div class="characteristic__item-title">Параметры трубы</div>
+                      <div class="characteristic__item-title">Параметры емкости</div>
                       <div class="title-icon" style="color: #fee6e6; background-image: url('img/ico-pipe-2.png')"></div>
                     </div>
                     <div class="characteristic__item-filter">
@@ -855,6 +1002,45 @@
                           <option value="2">Пластик</option>
                         </select>
                       </div>
+                      <div class="default-input--row">
+                        <div class="default-input"><span>мм</span>
+                          <input class="default-input__input" type="number" value="3" min="1" max="100" step="1"/>
+                          <div class="default-input__label">Толщина стенки</div>
+                          <div class="default-input__error">
+                            <div class="error-text"><!-- текст ошибки --></div>
+                          </div>
+                        </div>
+                        <div class="default-input"><span>кг/м3</span>
+                          <input class="default-input__input" type="number" value="20" min="1" max="100" step="1"/>
+                          <div class="default-input__label">Плотность материала<br> стенки</div>
+                          <div class="default-input__error">
+                            <div class="error-text"><!-- текст ошибки --></div>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="default-input"><span>кДж/(кг °C)</span>
+                        <input class="default-input__input" type="number" value="50" min="1" max="100" step="1"/>
+                        <div class="default-input__label">Теплоёмкость материала<br> стенки</div>
+                        <div class="default-input__error">
+                          <div class="error-text"><!-- текст ошибки --></div>
+                        </div>
+                      </div>
+                      <div class="default-input--row">
+                        <div class="default-input"><span>м/c</span>
+                          <input class="default-input__input" type="text" value="3"/>
+                          <label class="default-input__label">высота</label>
+                          <div class="default-input__error">
+                            <div class="error-text"><!-- текст ошибки --></div>
+                          </div>
+                        </div>
+                        <div class="default-input"><span>м/c</span>
+                          <input class="default-input__input" type="text" value="3"/>
+                          <label class="default-input__label">Диаметр</label>
+                          <div class="default-input__error">
+                            <div class="error-text"><!-- текст ошибки --></div>
+                          </div>
+                        </div>
+                      </div>
                       <div class="default-select">
                         <div class="default-input__label">Внешнее покрытие</div>
                         <select class="default-select__select">
@@ -862,26 +1048,13 @@
                           <option value="2">Без покровного слоя 2</option>
                         </select>
                       </div>
-                      <div class="default-input"><span>мм</span>
-                        <input class="default-input__input" type="text" value="20"/>
-                        <label class="default-input__label">Внешний диаметр</label>
-                        <div class="default-input__error">
-                          <div class="error-text"><!-- текст ошибки --></div>
-                        </div>
+                      <div class="default-input default-input--checkbox">
+                        <input class="default-input__input--checkbox" type="checkbox" id="2901" checked="checked"/>
+                        <label class="default-input__label--checkbox" for="2901">Наработка системы более 5000 часов</label>
                       </div>
-                      <div class="default-input"><span>м</span>
-                        <input class="default-input__input" type="text" value="100"/>
-                        <label class="default-input__label">Длинна</label>
-                        <div class="default-input__error">
-                          <div class="error-text"><!-- текст ошибки --></div>
-                        </div>
-                      </div>
-                      <div class="default-input"><span>мм</span>
-                        <input class="default-input__input" type="text" value="3"/>
-                        <label class="default-input__label">Толщина стенки</label>
-                        <div class="default-input__error">
-                          <div class="error-text"><!-- текст ошибки --></div>
-                        </div>
+                      <div class="default-input default-input--checkbox">
+                        <input class="default-input__input--checkbox" type="checkbox" id="2902" checked="checked"/>
+                        <label class="default-input__label--checkbox" for="2902">Учитывать изоляцию днища</label>
                       </div>
                     </div>
                   </div>
@@ -892,16 +1065,209 @@
                   <div class="title">Изоляция</div>
                   <div class="title-icon" style="color: #e7faec; background-image: url('img/ico-isolation.png')"></div>
                 </div>
-                <div class="isolation-top tabs">
+                <div class="isolation-top">
                   <div class="tabs__tab active" data-id="1">СН</div>
                   <div class="tabs__tab" data-id="2">СТ</div>
                   <div class="tabs__tab" data-id="3">ТБ</div>
                   <div class="tabs__tab" data-id="4">ПК</div>
-                  <div class="tabs__tab" data-id="5">З</div>
                   <div class="tabs__tab" data-id="6">Ручной расчет</div>
                 </div>
                 <div class="isolation-bot tabs__content active" data-id="1">
-                  <div class="isolation-info">Предотвращение замерзания </div>
+                  <div class="isolation-info">Соблюдение норм плотности теплового потока (согласно СП 61.13330.2012,<br> актуализированная редакция СНиП 41-03-2003)</div>
+                  <div class="isolation-results">
+                    <div class="isolation-results__top">
+                      <div class="title">Результат</div>
+                    </div>
+                    <div class="isolation-results__row">
+                      <div class="isolation-results__title">Точный расчет толщины изоляции (мм):</div>
+                      <div class="isolation-results__num">17</div>
+                    </div>
+                    <div class="isolation-results__row">
+                      <div class="isolation-results__title">Рекомендуемая толщина для выбранной изоляции (мм):</div>
+                      <div class="isolation-results__num">13.3</div>
+                    </div>
+                    <div class="isolation-results__row">
+                      <div class="isolation-results__title">Тепловые потери согласно СП (Вт/м)</div>
+                      <div class="isolation-results__num">21.4</div>
+                    </div>
+                    <div class="isolation-results__row">
+                      <div class="isolation-results__title">Допустимая температура внешнего слоя согласно СП (°C)</div>
+                      <div class="isolation-results__num">55</div>
+                    </div>
+                    <div class="isolation-results__row">
+                      <div class="isolation-results__title">Температура поверхности внешнего слоя изоляции (°C)</div>
+                      <div class="isolation-results__num">55</div>
+                    </div>
+                  </div>
+                  <div class="isolation-row">
+                    <div class="default-select">
+                      <div class="default-input__label">Изоляция</div>
+                      <select class="default-select__select">
+                        <option value="1">PAROC Pro Wired Mat 80</option>
+                        <option value="2">PAROC Pro Wired Mat 90</option>
+                      </select>
+                    </div><a href="">Рассчитать</a>
+                  </div>
+                  <div class="isolation-gallery">
+                    <div class="isolation-gallery__img"><img src="img/photos/isolation.jpg" alt=""/></div>
+                  </div>
+                </div>
+                <div class="isolation-bot tabs__content" data-id="2">
+                  <div class="isolation-info">Расчет толщины изоляции по заданному снижению (повышению) температуры<br> вещества, хранимого в емкости</div>
+                  <div class="isolation-results">
+                    <div class="isolation-results__top">
+                      <div class="title">Результат</div>
+                    </div>
+                    <div class="isolation-results__row">
+                      <div class="isolation-results__title">Точный расчет толщины изоляции (мм):</div>
+                      <div class="isolation-results__num">17</div>
+                    </div>
+                    <div class="isolation-results__row">
+                      <div class="isolation-results__title">Рекомендуемая толщина для выбранной изоляции (мм):</div>
+                      <div class="isolation-results__num">13.3</div>
+                    </div>
+                    <div class="isolation-results__row">
+                      <div class="isolation-results__title">температура поверхности внешнего слоя изоляции (°C):</div>
+                      <div class="isolation-results__num">13.3</div>
+                    </div>
+                    <div class="isolation-results__row">
+                      <div class="isolation-results__title">Тепловые потери согласно СП (Вт/м):</div>
+                      <div class="isolation-results__num">21.4</div>
+                    </div>
+                    <div class="isolation-results__row">
+                      <div class="isolation-results__title">Расчетные тепловые потери (Вт/м):</div>
+                      <div class="isolation-results__num">55</div>
+                    </div>
+                    <div class="isolation-results__row">
+                      <div class="isolation-results__title">Полные тепловые потери (Вт):</div>
+                      <div class="isolation-results__num">55</div>
+                    </div>
+                  </div>
+                  <div class="isolation-row">
+                    <div class="default-select">
+                      <div class="default-input__label">Изоляция</div>
+                      <select class="default-select__select">
+                        <option value="1">PAROC Pro Slab 30</option>
+                        <option value="2">PAROC Pro Slab 20</option>
+                      </select>
+                    </div><a href="">Рассчитать</a>
+                  </div>
+                  <div class="isolation-row">
+                    <div class="default-input"><span>°C</span>
+                      <input class="default-input__input" type="number" value="20" min="1" max="100" step="1"/>
+                      <div class="default-input__label">Конечная температура вещества</div>
+                      <div class="default-input__error">
+                        <div class="error-text"><!-- текст ошибки --></div>
+                      </div>
+                    </div>
+                    <div class="default-input"><span>ч</span>
+                      <input class="default-input__input" type="number" value="20" min="1" max="100" step="1"/>
+                      <div class="default-input__label">Время хранения</div>
+                      <div class="default-input__error">
+                        <div class="error-text"><!-- текст ошибки --></div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="isolation-gallery">
+                    <div class="isolation-gallery__img"><img src="img/photos/isolation.jpg" alt=""/></div>
+                  </div>
+                </div>
+                <div class="isolation-bot tabs__content" data-id="3">
+                  <div class="isolation-info">Соблюдение требований безопасности</div>
+                  <div class="isolation-results">
+                    <div class="isolation-results__top">
+                      <div class="title">Результат</div>
+                    </div>
+                    <div class="isolation-results__row">
+                      <div class="isolation-results__title">Точный расчет толщины изоляции (мм):</div>
+                      <div class="isolation-results__num">17</div>
+                    </div>
+                    <div class="isolation-results__row">
+                      <div class="isolation-results__title">Рекомендуемая толщина для выбранной изоляции (мм):</div>
+                      <div class="isolation-results__num">13.3</div>
+                    </div>
+                    <div class="isolation-results__row">
+                      <div class="isolation-results__title">Допустимая температура внешнего слоя СП (°C)</div>
+                      <div class="isolation-results__num">21.4</div>
+                    </div>
+                    <div class="isolation-results__row">
+                      <div class="isolation-results__title">Полные тепловые потери (Вт)</div>
+                      <div class="isolation-results__num">21.4</div>
+                    </div>
+                    <div class="isolation-results__row">
+                      <div class="isolation-results__title">Тепловые потери согласно СП (Вт/м)</div>
+                      <div class="isolation-results__num">55</div>
+                    </div>
+                    <div class="isolation-results__row">
+                      <div class="isolation-results__title">Расчетные тепловые потери (Вт/м^2)</div>
+                      <div class="isolation-results__num">55</div>
+                    </div>
+                  </div>
+                  <div class="isolation-row">
+                    <div class="default-select">
+                      <div class="default-input__label">Изоляция</div>
+                      <select class="default-select__select">
+                        <option value="1">PAROC Pro Slab 30</option>
+                        <option value="2">PAROC Pro Wired Mat 90</option>
+                      </select>
+                    </div><a href="">Посмотреть спецификацию</a>
+                  </div>
+                  <div class="isolation-gallery">
+                    <div class="isolation-gallery__img"><img src="img/photos/isolation.jpg" alt=""/></div>
+                  </div>
+                </div>
+                <div class="isolation-bot tabs__content" data-id="4">
+                  <div class="isolation-info">Предотвращение конденсации влаги на поверхности изолируемого оборудования<br> или трубопровода</div>
+                  <div class="isolation-results">
+                    <div class="isolation-results__top">
+                      <div class="title">Результат</div>
+                    </div>
+                    <div class="isolation-results__row">
+                      <div class="isolation-results__title">Точный расчет толщины изоляции (мм):</div>
+                      <div class="isolation-results__num">17</div>
+                    </div>
+                    <div class="isolation-results__row">
+                      <div class="isolation-results__title">Рекомендуемая толщина для выбранной изоляции (мм):</div>
+                      <div class="isolation-results__num">13.3</div>
+                    </div>
+                    <div class="isolation-results__row">
+                      <div class="isolation-results__title">Полные тепловые потери (Вт)</div>
+                      <div class="isolation-results__num">21.4</div>
+                    </div>
+                    <div class="isolation-results__row">
+                      <div class="isolation-results__title">Расчетные тепловые потери (Вт/м^2)</div>
+                      <div class="isolation-results__num">55</div>
+                    </div>
+                    <div class="isolation-results__row">
+                      <div class="isolation-results__title">Тепловые потери согласно СП (Вт/м^2)</div>
+                      <div class="isolation-results__num">55</div>
+                    </div>
+                    <div class="isolation-results__row">
+                      <div class="isolation-results__title">Допустимая температура внешнего слоя согласно СП (°C)</div>
+                      <div class="isolation-results__num">55</div>
+                    </div>
+                  </div>
+                  <div class="isolation-row">
+                    <div class="default-select">
+                      <div class="default-input__label">Изоляция</div>
+                      <select class="default-select__select">
+                        <option value="1">PAROC Pro Slab 30</option>
+                        <option value="2">PAROC Pro Slab 20</option>
+                      </select>
+                    </div>
+                    <div class="default-input"><span>%</span>
+                      <input class="default-input__input" type="text" value="70"/>
+                      <label class="default-input__label">Влажность</label>
+                      <div class="default-input__error">
+                        <div class="error-text"><!-- текст ошибки --></div>
+                      </div>
+                    </div><a href="">Рассчитать</a>
+                  </div>
+                  <div class="isolation-gallery">
+                    <div class="isolation-gallery__img"><img src="img/photos/isolation.jpg" alt=""/></div>
+                  </div>
+                </div>
+                <div class="isolation-bot tabs__content" data-id="6">
                   <div class="isolation-results">
                     <div class="isolation-results__top">
                       <div class="title">Результат</div>
@@ -931,7 +1297,7 @@
                     <div class="default-select">
                       <div class="default-input__label">Изоляция</div>
                       <select class="default-select__select">
-                        <option value="1">PAROC Pro Slab 80</option>
+                        <option value="1">PAROC Pro Wired Mat 80</option>
                         <option value="2">PAROC Pro Slab 20</option>
                       </select>
                     </div>
@@ -976,11 +1342,6 @@
                     <div class="isolation-gallery__img"><img src="img/photos/isolation.jpg" alt=""/></div>
                   </div>
                 </div>
-                <div class="isolation-bot tabs__content" data-id="2"></div>
-                <div class="isolation-bot tabs__content" data-id="3"></div>
-                <div class="isolation-bot tabs__content" data-id="4"></div>
-                <div class="isolation-bot tabs__content" data-id="5"></div>
-                <div class="isolation-bot tabs__content" data-id="6"></div>
               </div>
               <div class="results">
                 <div class="results-top">

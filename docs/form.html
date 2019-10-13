@@ -24,7 +24,9 @@
       <div class="wrapper">
         <ul>
           <li><a class="fancybox" href="#form-1">Всплывающее окно</a></li>
-        </ul>
+          <li><a class="fancybox" href="#form-2">Всплывающее окно 2</a></li>
+          <li><a class="fancybox" href="#form-3">Всплывающее окно 3</a></li>
+        </ul><br><br>
       </div>
     </main>
     <div class="popup" id="form-1">
@@ -36,6 +38,54 @@
               <input class="default-btn" type="submit" value="Сохранить"/><a class="btn" href="">Отменить</a>
             </div>
           </div>
+        </div>
+      </form>
+    </div>
+    <div class="popup" id="form-2">
+      <div class="form__title"> <span>Для сохранения результата расчёта просьба<br> заполнить форму. Вы сможете загрузить<br> сохранённый результат в удобное вам<br> время по e-mail.</span><img src="img/form-logo.png" alt=""/></div>
+      <form action="#">
+        <div class="form__inputs" style="max-width: 525px">
+          <div class="form__inputs-input">
+            <div class="default-input">
+              <input class="default-input__input" type="text" placeholder="Николай Владимирович Аношкин" value="Николай Владимирович Аношкин"/>
+              <label class="default-input__label">Имя</label>
+              <div class="default-input__error">
+                <div class="error-text"><!-- текст ошибки --></div>
+              </div>
+            </div>
+          </div>
+          <div class="form__inputs-input">
+            <div class="default-input">
+              <input class="default-input__input" type="email" pattern="[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Za-z]{1,63}$" inputmode="email" placeholder="mail@yandex.ru"/>
+              <label class="default-input__label">E-mail</label>
+              <div class="default-input__error">
+                <div class="error-text"><!-- текст ошибки --></div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="form__submit">
+          <div class="form__submi">
+            <div class="form__submit-btn">
+              <input class="default-btn" type="submit" value="Сохранить"/><a class="btn" href="">Отменить</a>
+            </div>
+          </div>
+        </div>
+      </form>
+    </div>
+    <div class="popup form-result" id="form-3">
+      <div class="form__title"> <span>Введите свой E-mail для открытия последнего<br> сохранённого результата расчёта</span><img src="img/form-logo.png" alt=""/></div>
+      <form action="#">
+        <div class="form__inputs-result">
+          <div class="form__inputs-input">
+            <div class="default-input">
+              <input class="default-input__input" type="email" pattern="[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Za-z]{1,63}$" inputmode="email" placeholder="mail@yandex.ru"/>
+              <label class="default-input__label">E-mail</label>
+              <div class="default-input__error">
+                <div class="error-text"><!-- текст ошибки --></div>
+              </div>
+            </div>
+          </div><a class="default-btn" href="">Отменить</a>
         </div>
       </form>
     </div>

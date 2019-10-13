@@ -10,3 +10,48 @@
 					a(href="").btn Отменить
 				
 
+.popup#form-2
+	.form__title 
+		span Для сохранения результата расчёта просьба<br> заполнить форму. Вы сможете загрузить<br> сохранённый результат в удобное вам<br> время по e-mail.
+		img(src="img/form-logo.png", alt="")
+	form(action="#")
+		.form__inputs(style="max-width: 525px")
+			.form__inputs-input
+				.default-input
+					input.default-input__input(type="text" placeholder="Николай Владимирович Аношкин" value="Николай Владимирович Аношкин")
+					label.default-input__label Имя
+					.default-input__error
+						.error-text
+							<!-- текст ошибки -->
+			
+			.form__inputs-input
+				.default-input
+					input.default-input__input(type="email" pattern="[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\\.[A-Za-z]{1,63}$" inputmode="email" placeholder="mail@yandex.ru")
+					label.default-input__label E-mail
+					.default-input__error
+						.error-text
+							<!-- текст ошибки -->
+
+		.form__submit
+			.form__submi
+				.form__submit-btn
+					input.default-btn(type="submit" value="Сохранить")
+					a(href="").btn Отменить
+
+
+.popup.form-result#form-3
+	.form__title 
+		span Введите свой E-mail для открытия последнего<br> сохранённого результата расчёта
+		img(src="img/form-logo.png", alt="")
+	form(action="#")
+		.form__inputs-result
+			.form__inputs-input
+				.default-input
+					input.default-input__input(type="email" pattern="[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\\.[A-Za-z]{1,63}$" inputmode="email" placeholder="mail@yandex.ru")
+					label.default-input__label E-mail
+					.default-input__error
+						.error-text
+							<!-- текст ошибки -->
+			a(href="").default-btn Отменить
+
+		

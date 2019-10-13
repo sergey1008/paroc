@@ -26,6 +26,9 @@
 		display: flex
 		flex-wrap: wrap
 
+		+ .form__submit
+			margin-top: 45px
+
 		&:not(&--2, &--3, &--4)
 
 			.form
@@ -85,6 +88,11 @@ textarea.default-input__input
 	position: relative
 	justify-content: space-between
 	flex: 1 1 auto
+
+	&--row
+		display: flex
+		justify-content: space-between
+
 
 	&__error
 		transition: opacity .3s ease
@@ -216,8 +224,12 @@ textarea.default-input__input
 
 		~
 			label
+				&:before
+					background-color: #757575
+					
 				&:after
 					opacity: 1
+
 
 .default-input__label--checkbox
 	position: relative
@@ -230,21 +242,24 @@ textarea.default-input__input
 		left: 0
 		top: 0
 		size: 18px
-		background-color: #bdbdbd
+		background-color: #fff
 		cursor: pointer
+		border: 2px solid #757575
 
 	&:after
 		content: ''
 		display: block
 		position: absolute
-		top: 5px
-		left: 7px
-		size: 4px 8px
+		top: 3px
+		left: 6px
+		width: 6px
+		height: 10px
 		border-right: 1px solid #fff
 		border-bottom: 1px solid #fff
 		transform: rotate(45deg)
 		opacity: 0
 		transition: opacity .3s ease
+		
 
 				
 @supports (display: grid)

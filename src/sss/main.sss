@@ -20,6 +20,45 @@
 @import "isolation.sss"
 @import "results.sss"
 @import "save-result.sss"
+// @import "filter.sss"
+
+
+.form-result
+	.form__inputs-result
+		display: flex
+		align-items: flex-end
+
+	.form__inputs-input
+		width: calc(100% - 150px) !important
+		margin-right: 20px !important	
+
+// /* Для Chrome */
+input[type=number]
+	&::-webkit-inner-spin-button, &::-webkit-outer-spin-button
+		-webkit-appearance: none
+		display: block
+		width: 9px
+		height: 16px
+		opacity: 1
+		background-color: transparent
+		background-image: url("../img/ico-spiner.png") !important
+		background-repeat: no-repeat !important
+		background-position: center !important
+		background-size: contain !important
+
+	// &::-webkit-inner-spin-button
+
+	// &::-webkit-outer-spin-button
+	// 	background-image: url("../img/ico-arrow--select.png") !important
+	// 	background-repeat: no-repeat !important
+	// 	background-position: center !important
+	// 	background-size: contain !important
+	// 	background-color: blue
+
+// /* Для Firefox */
+// input[type=number]
+// 	-moz-appearance: textfield
+
 
 
 #content
@@ -45,7 +84,8 @@
 	input
 		&[type="text"], 
 		&[type="tel"], 
-		&[type="email"]
+		&[type="email"],
+		&[type="number"]
 			height: 50px
 			border: 0
 			border-bottom: 1px solid var(--second-color)
