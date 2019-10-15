@@ -45,7 +45,7 @@
 
 		input
 			background-color: var(--background-color)
-			height: 30px
+			height: 30px !important
 			border: 0 !important
 			box-shadow: none
 			padding: 0 20px !important
@@ -87,3 +87,24 @@
 			position: absolute
 			top: 20px
 			right: 10px
+
+@media (max-width: 1200px)
+	
+	.section
+		&-bot
+			flex-wrap: wrap
+
+		&-input
+			width: calc(100% - 95px)
+			margin-bottom: 20px
+
+		&-btn
+			&:nth-last-child(2)
+				margin-left: 93px
+
+@media (max-width: 1000px)
+	
+	.section-top__el
+		background-color: #fff !important
+		color: #000 !important
+		padding: 5px 13px 5px 5px !important

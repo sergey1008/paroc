@@ -30,3 +30,40 @@
 
 		&.active
 			border-color: var(--main-color)
+
+@media (max-width: 1200px)
+	
+	.main-tabs__tab
+
+		&.active
+			border: 0
+
+			.main-tabs__tab-title
+				border-bottom: 2px solid var(--main-color)
+
+
+		figure
+			display: none
+
+		&:nth-child(3)
+			~ *
+				display: none
+
+		&-title
+			color: var(--main-color)
+			font-weight: 400
+
+			br
+				display: none
+
+
+@media (max-width: 1000px)
+	
+	.main-tabs__tab
+		padding: 0
+
+		&-title
+			padding: 10px
+
+	.main-tabs__top
+		margin-bottom: 25px
