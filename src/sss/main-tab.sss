@@ -45,9 +45,7 @@
 		figure
 			display: none
 
-		&:nth-child(3)
-			~ *
-				display: none
+		
 
 		&-title
 			color: var(--main-color)
@@ -67,3 +65,10 @@
 
 	.main-tabs__top
 		margin-bottom: 25px
+
+
+	.main-tabs__tab:not(:last-child)
+		margin-right: 5px
+
+	.main-tabs__tab-title
+		padding: 5px
