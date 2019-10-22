@@ -40,7 +40,7 @@ html(lang="ru")
 								.section-bot(data-id="1").tabs__content.active
 									.section-label Название
 									.section-input
-										input(type="text")
+										input(type="text" palceholder="Название")
 									.section-btn
 										.default-btn Добавить следующую секцию
 									.section-btn
@@ -103,7 +103,6 @@ html(lang="ru")
 												.default-input__label Внешнее покрытие
 												select.default-select__select
 													option(value="1") Без покровного слоя
-													option(value="2") Без покровного слоя 2
 											.default-input
 												span мм
 												input.default-input__input(type="text" value="20")
@@ -134,7 +133,6 @@ html(lang="ru")
 												.default-input__label Способ крепления
 												select.default-select__select
 													option(value="1") Подвижные опоры
-													option(value="2") Подвижные опоры 2
 											.default-select
 												.default-input__label Направление секции
 												select.default-select__select
@@ -239,20 +237,14 @@ html(lang="ru")
 									//- 	.isolation-gallery__img
 									//- 		img(src="img/photos/isolation.jpg", alt="")
 								.isolation-bot.tabs__content(data-id="3")
-									.isolation-info Предотвращение конденсации влаги на поверхности изолируемого оборудования или трубопровода
+									.isolation-info Соблюдение требований безопасности
 									.isolation-row
 										.default-select
 											.default-input__label Изоляция
 											select.default-select__select
 												option(value="1") PAROC Pro Slab 30
 												option(value="2") PAROC Pro Slab 20
-										.default-input
-											span %
-											input.default-input__input(type="text" value="70")
-											label.default-input__label Влажность
-											.default-input__error
-												.error-text
-													<!-- текст ошибки -->
+				
 										a(href="") Посмотреть спецификацию
 									.isolation-gallery
 										.isolation-gallery__img
@@ -317,7 +309,6 @@ html(lang="ru")
 											.default-input__label Изоляция
 											select.default-select__select
 												option(value="1") PAROC Pro Slab 30
-												option(value="2") PAROC Pro Slab 20
 										.default-input
 											span %
 											input.default-input__input(type="text" value="70")
@@ -397,7 +388,6 @@ html(lang="ru")
 											.default-input__label Изоляция
 											select.default-select__select
 												option(value="1") PAROC Pro Slab 80
-												option(value="2") PAROC Pro Slab 20
 										.default-input
 											span ч
 											input.default-input__input(type="text" value="30")
@@ -410,12 +400,11 @@ html(lang="ru")
 										.isolation-gallery__img
 											img(src="img/photos/isolation.jpg", alt="")
 								.isolation-bot.tabs__content(data-id="6")
-									.isolation-info Предотвращение замерзания 
 
 									.isolation-results
 										.isolation-results__top
 											.title Результат
-										each item, i in [{title: "Тепловые потери согласно СП (Вт/м^2):", num: "17"}, {title: "Расчётные тепловые потери (Вт/м^2):", num: "13.3"}, {title: "T пов-ти внешнего слоя изоляции (°C):", num: "21.4"}, {title: "Допустимая T согласно СП (°C):", num: "55"}, {title: "Полные тепловые потери (Вт):", num: "55"}]
+										each item, i in [{title: "Тепловые потери согласно СП (Вт/м^2):", num: "17"}, {title: "Расчётные тепловые потери (Вт/м^2):", num: "13.3"}, {title: "T пов-ти внешнего слоя изоляции (°C):", num: "21.4"}, {title: "Допустимая T согласно СП (°C):", num: "55"}]
 											.isolation-results__row
 												.isolation-results__title=item.title
 												.isolation-results__num=item.num
@@ -425,7 +414,6 @@ html(lang="ru")
 											.default-input__label Изоляция
 											select.default-select__select
 												option(value="1") PAROC Pro Slab 80
-												option(value="2") PAROC Pro Slab 20
 										.default-input
 											span мм
 											input.default-input__input(type="text" value="30")
@@ -483,7 +471,7 @@ html(lang="ru")
 									.title-icon(style="color: #e6f6fe; background-image: url('img/ico-save.png')")
 								.save-result__bot
 									.default-input
-										input.default-input__input(type="text" value="Иван")
+										input.default-input__input(type="text" value="Имя")
 										label.default-input__label Имя
 										.default-input__error
 											.error-text
@@ -660,7 +648,6 @@ html(lang="ru")
 											.default-input__label Изоляция
 											select.default-select__select
 												option(value="1") PAROC Pro Wired Mat 80
-												option(value="2") PAROC Pro Wired Mat 90
 										
 										a(href="") Рассчитать
 									.isolation-gallery
@@ -712,7 +699,6 @@ html(lang="ru")
 											.default-input__label Изоляция
 											select.default-select__select
 												option(value="1") PAROC Pro Wired Mat 80
-												option(value="2") PAROC Pro Wired Mat 90
 										
 										a(href="") Рассчитать
 									.isolation-gallery
@@ -725,7 +711,7 @@ html(lang="ru")
 									.isolation-results
 										.isolation-results__top
 											.title Результат
-										each item, i in [{title: "Точный расчет толщины изоляции (мм):", num: "17"}, {title: "Рекомендуемая толщина для выбранной изоляции (мм):", num: "13.3"}, {title: "Температура поверхности внешнего слоя изоляции °C", num: "21.4"}, {title: "Тепловые потери согласно СП (Вт/м)", num: "55"}, {title: "Расчетные тепловые потери (Вт/м)", num: "55"}, {title: "Допустимая температура внешнего слоя согласно СП (°C)", num: "55"}, ]
+										each item, i in [{title: "Точный расчет толщины изоляции (мм):", num: "17"}, {title: "Рекомендуемая толщина для выбранной изоляции (мм):", num: "13.3"}, {title: "Тепловые потери согласно СП (Вт/м^2)", num: "21.4"}, {title: "Температура поверхности внешнего слоя изоляции (°C)", num: "55"}, {title: "Расчетные тепловые потери (Вт/м^2)", num: "55"} ]
 											.isolation-results__row
 												.isolation-results__title=item.title
 												.isolation-results__num=item.num
@@ -735,11 +721,10 @@ html(lang="ru")
 											.default-input__label Изоляция
 											select.default-select__select
 												option(value="1") PAROC Pro Slab 30
-												option(value="2") PAROC Pro Slab 20
 										.default-input
 											span %
 											input.default-input__input(type="text" value="70")
-											label.default-input__label Время приостановки движения вещества
+											label.default-input__label Влажность
 											.default-input__error
 												.error-text
 													<!-- текст ошибки -->
@@ -753,7 +738,7 @@ html(lang="ru")
 									.isolation-results
 										.isolation-results__top
 											.title Результат
-										each item, i in [{title: "Тепловые потери согласно СП (Вт/м^2):", num: "17"}, {title: "Расчётные тепловые потери (Вт/м^2):", num: "13.3"}, {title: "T пов-ти внешнего слоя изоляции (°C):", num: "21.4"}, {title: "Допустимая T согласно СП (°C):", num: "55"}, {title: "Полные тепловые потери (Вт):", num: "55"}]
+										each item, i in [{title: "Тепловые потери согласно СП (Вт/м^2):", num: "17"}, {title: "Расчётные тепловые потери (Вт/м^2):", num: "13.3"}, {title: "T пов-ти внешнего слоя изоляции (°C):", num: "21.4"}, {title: "Допустимая T согласно СП (°C):", num: "55"}]
 											.isolation-results__row
 												.isolation-results__title=item.title
 												.isolation-results__num=item.num
@@ -762,8 +747,7 @@ html(lang="ru")
 										.default-select
 											.default-input__label Изоляция
 											select.default-select__select
-												option(value="1") PAROC Pro Slab 80
-												option(value="2") PAROC Pro Slab 20
+												option(value="1") PAROC Pro Wired Mat 80
 										.default-input
 											span мм
 											input.default-input__input(type="text" value="30")
@@ -847,7 +831,7 @@ html(lang="ru")
 								.section-bot
 									.section-label Название
 									.section-input
-										input(type="text")
+										input(type="text" placeholder="Название")
 									.section-btn
 										.default-btn Добавить следующую секцию
 									.section-btn
@@ -869,12 +853,10 @@ html(lang="ru")
 												.default-input__label Внешняя среда
 												select.default-select__select
 													option(value="1") Открытая среда
-													option(value="2") Открытая среда 2
 											.default-select
 												.default-input__label Теплоноситель
 												select.default-select__select
 													option(value="1") Вода
-													option(value="2") Вода 2
 											.default-input
 												span °C
 												input.default-input__input(type="text" value="20")
@@ -991,7 +973,6 @@ html(lang="ru")
 											.default-input__label Изоляция
 											select.default-select__select
 												option(value="1") PAROC Pro Wired Mat 80
-												option(value="2") PAROC Pro Wired Mat 90
 										
 										a(href="") Рассчитать
 									.isolation-gallery
@@ -1065,15 +1046,14 @@ html(lang="ru")
 										.default-select
 											.default-input__label Изоляция
 											select.default-select__select
-												option(value="1") PAROC Pro Slab 30
-												option(value="2") PAROC Pro Slab 20
+												option(value="1") PAROC Pro Wired Mat 80
 
 										a(href="") Рассчитать
 									.isolation-row
 										.default-input
 											span °C
 											input.default-input__input(type="number" value="20" min="1" max="100" step="1")
-											.default-input__label Конечная температура вещества
+											.default-input__label Конечная температура<br> вещества
 											.default-input__error
 												.error-text
 													<!-- текст ошибки -->
@@ -1104,9 +1084,8 @@ html(lang="ru")
 											.default-input__label Изоляция
 											select.default-select__select
 												option(value="1") PAROC Pro Slab 30
-												option(value="2") PAROC Pro Wired Mat 90
 										
-										a(href="") Посмотреть спецификацию
+										a(href="") Рассчитать
 									.isolation-gallery
 										.isolation-gallery__img
 											img(src="img/photos/isolation.jpg", alt="")
@@ -1117,7 +1096,7 @@ html(lang="ru")
 									.isolation-results
 										.isolation-results__top
 											.title Результат
-										each item, i in [{title: "Точный расчет толщины изоляции (мм):", num: "17"}, {title: "Рекомендуемая толщина для выбранной изоляции (мм):", num: "13.3"}, {title: "Полные тепловые потери (Вт)", num: "21.4"}, {title: "Расчетные тепловые потери (Вт/м^2)", num: "55"}, {title: "Тепловые потери согласно СП (Вт/м^2)", num: "55"}, {title: "Допустимая температура внешнего слоя согласно СП (°C)", num: "55"} ]
+										each item, i in [{title: "Точный расчет толщины изоляции (мм):", num: "17"}, {title: "Рекомендуемая толщина для выбранной изоляции (мм):", num: "13.3"}, {title: "Полные тепловые потери (Вт)", num: "21.4"}, {title: "Расчетные тепловые потери (Вт/м^2)", num: "55"}, {title: "Тепловые потери согласно СП (Вт/м^2)", num: "55"}, {title: "Температура поверхности внешнего слоя изоляции (°C)", num: "55"} ]
 											.isolation-results__row
 												.isolation-results__title=item.title
 												.isolation-results__num=item.num
@@ -1127,7 +1106,6 @@ html(lang="ru")
 											.default-input__label Изоляция
 											select.default-select__select
 												option(value="1") PAROC Pro Slab 30
-												option(value="2") PAROC Pro Slab 20
 										.default-input
 											span %
 											input.default-input__input(type="text" value="70")
@@ -1154,7 +1132,6 @@ html(lang="ru")
 											.default-input__label Изоляция
 											select.default-select__select
 												option(value="1") PAROC Pro Wired Mat 80
-												option(value="2") PAROC Pro Slab 20
 										.default-input
 											span мм
 											input.default-input__input(type="text" value="30")
@@ -1212,7 +1189,7 @@ html(lang="ru")
 									.title-icon(style="color: #e6f6fe; background-image: url('img/ico-save.png')")
 								.save-result__bot
 									.default-input
-										input.default-input__input(type="text" value="Иван")
+										input.default-input__input(type="text" value="Иван" placeholder="Имя")
 										label.default-input__label Имя
 										.default-input__error
 											.error-text
@@ -1238,7 +1215,7 @@ html(lang="ru")
 								.section-bot
 									.section-label Название
 									.section-input
-										input(type="text")
+										input(type="text" placeholder="Название")
 									.section-btn
 										.default-btn Добавить следующую секцию
 									.section-btn
@@ -1260,7 +1237,6 @@ html(lang="ru")
 												.default-input__label Теплоноситель
 												select.default-select__select
 													option(value="1") Вода
-													option(value="2") Вода 2
 											.default-input
 												span °C
 												input.default-input__input(type="text" value="20")
@@ -1292,12 +1268,10 @@ html(lang="ru")
 												.default-input__label Материал
 												select.default-select__select
 													option(value="1") Металл
-													option(value="2") Пластик
 											.default-select
 												.default-input__label Внешнее покрытие
 												select.default-select__select
 													option(value="1") Без покровного слоя
-													option(value="2") Без покровного слоя 2
 											.default-input
 												span мм
 												input.default-input__input(type="text" value="20")
@@ -1348,7 +1322,6 @@ html(lang="ru")
 											.default-input__label Изоляция
 											select.default-select__select
 												option(value="1") PAROC Pro Slab 80
-												option(value="2") PAROC Pro Slab 20
 										.default-input
 											span мм
 											input.default-input__input(type="text" value="30")

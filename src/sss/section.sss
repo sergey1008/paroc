@@ -65,18 +65,27 @@
 .fancybox-bg
 	background-color: rgba(0,0,0, .6) !important
 
+.fancybox-close-small
+	size: 30px !important
+
 .popup
 	position: relative !important
 	padding: 50px !important
 	width: 845px
+
+	&.form-result
+		.btn
+			margin-bottom: 5px
+
 
 	.default-btn
 		margin-right: 35px
 
 
 	.fancybox-close-small
-		opacity: 0
-		pointer-events: none
+		padding: 0
+		// opacity: 0
+		// pointer-events: none
 	
 	.form__title
 		font-size: em(26)
@@ -87,6 +96,15 @@
 			position: absolute
 			top: 20px
 			right: 10px
+
+@media (min-width: 1000px)
+
+	.popup
+
+		&.form-result
+			width: 950px
+
+
 
 @media (max-width: 1200px)
 	

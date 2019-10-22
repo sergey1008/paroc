@@ -27,6 +27,8 @@
 				min-width: 65px
 
 	&-bot
+		position: relative
+
 		&:after
 			content: ''
 			display: block
@@ -35,7 +37,7 @@
 
 	&-info
 		color: var(--second-color)
-		margin-bottom: 40px
+		margin-bottom: 20px
 
 	&-row
 		display: flex
@@ -59,7 +61,10 @@
 				width: 100%
 
 		.default-input
-			max-width: 100px
+			max-width: 200px
+
+			.default-input__input
+				max-width: 100px
 
 			span
 				position: absolute
@@ -89,7 +94,7 @@
 		align-items: center
 
 		border-bottom: 1px solid var(--second-color)
-		padding: 12px 0
+		padding: 8px 0
 
 	&__title
 		color: var(--second-color)
@@ -101,11 +106,27 @@
 
 
 
+	~ .isolation__sloy-cont
+		padding-bottom: 200px
+
+		+ .isolation-gallery
+			left: auto
+			right: 0
+
+
+
+
+
 	~ .isolation-gallery
 		justify-content: flex-start
 		margin-top: 30px
+		position: absolute
+		bottom: 0
+		left: 0
 
 
+.isolation-row + .isolation-row
+	padding-bottom: 200px
 
 .isolation__sloy
 	margin-top: 40px

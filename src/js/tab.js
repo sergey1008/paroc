@@ -1,7 +1,7 @@
 import $ from "jquery";
 
 $(_ => {
-	$(".tabs__tab").click(function(){
+	$("body").on("click", ".tabs__tab", function(){
 		let $this = $(this);
 
 		if ($this.hasClass("active"))
@@ -16,7 +16,7 @@ $(_ => {
 		$parent.find(".tabs__content[data-id='"+id+"']").addClass("active");
 	});
 
-	$(".main-tabs__tab").click(function(){
+	$("body")on("click", ".main-tabs__tab", function(){
 		let $this = $(this);
 
 		if ($this.hasClass("active"))
