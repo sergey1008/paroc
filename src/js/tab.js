@@ -16,7 +16,7 @@ $(_ => {
 		$parent.find(".tabs__content[data-id='"+id+"']").addClass("active");
 	});
 
-	$("body")on("click", ".main-tabs__tab", function(){
+	$("body").on("click", ".main-tabs__tab", function(){
 		let $this = $(this);
 
 		if ($this.hasClass("active"))

@@ -86,6 +86,7 @@
 	width: 390px
 	float: right
 	margin-left: 30px	
+	margin-bottom: 20px
 
 
 	&__row
@@ -95,6 +96,7 @@
 
 		border-bottom: 1px solid var(--second-color)
 		padding: 8px 0
+
 
 	&__title
 		color: var(--second-color)
@@ -107,26 +109,19 @@
 
 
 	~ .isolation__sloy-cont
-		padding-bottom: 200px
+		// padding-bottom: 200px
 
 		+ .isolation-gallery
-			left: auto
-			right: 0
+			float: right
 
+.isolation-row
 
+	+ .isolation-gallery
+		margin-top: 20px
+		display: block
 
-
-
-	~ .isolation-gallery
-		justify-content: flex-start
-		margin-top: 30px
-		position: absolute
-		bottom: 0
-		left: 0
-
-
-.isolation-row + .isolation-row
-	padding-bottom: 200px
+// .isolation-row + .isolation-row
+// 	padding-bottom: 200px
 
 .isolation__sloy
 	margin-top: 40px
@@ -135,6 +130,8 @@
 
 	&-cont
 		max-width: 610px
+		width: 100%
+		float: left
 
 	&-el
 		&:first-child
@@ -204,3 +201,6 @@
 
 	.isolation__sloy-cont
 		max-width: 100%
+
+	.isolation-gallery
+		margin-top: 20px

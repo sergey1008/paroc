@@ -377,9 +377,33 @@ document.addEventListener("DOMContentLoaded", function () {
   !*** ./src/js/tab.js ***!
   \***********************/
 /*! no exports provided */
-/***/ (function(module, exports) {
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
 
-throw new Error("Module build failed (from ./node_modules/babel-loader/lib/index.js):\nSyntaxError: C:\\Users\\Sergey\\Documents\\projects\\paroc\\src\\js\\tab.js: Unexpected token, expected \";\" (19:10)\n\n  17 | \t});\n  18 | \n> 19 | \t$(\"body\")on(\"click\", \".main-tabs__tab\", function(){\n     | \t         ^\n  20 | \t\tlet $this = $(this);\n  21 | \n  22 | \t\tif ($this.hasClass(\"active\"))\n    at Parser.raise (C:\\Users\\Sergey\\Documents\\projects\\paroc\\node_modules\\@babel\\parser\\lib\\index.js:6325:17)\n    at Parser.unexpected (C:\\Users\\Sergey\\Documents\\projects\\paroc\\node_modules\\@babel\\parser\\lib\\index.js:7642:16)\n    at Parser.semicolon (C:\\Users\\Sergey\\Documents\\projects\\paroc\\node_modules\\@babel\\parser\\lib\\index.js:7624:40)\n    at Parser.parseExpressionStatement (C:\\Users\\Sergey\\Documents\\projects\\paroc\\node_modules\\@babel\\parser\\lib\\index.js:10364:10)\n    at Parser.parseStatementContent (C:\\Users\\Sergey\\Documents\\projects\\paroc\\node_modules\\@babel\\parser\\lib\\index.js:9963:19)\n    at Parser.parseStatement (C:\\Users\\Sergey\\Documents\\projects\\paroc\\node_modules\\@babel\\parser\\lib\\index.js:9829:17)\n    at Parser.parseBlockOrModuleBlockBody (C:\\Users\\Sergey\\Documents\\projects\\paroc\\node_modules\\@babel\\parser\\lib\\index.js:10405:25)\n    at Parser.parseBlockBody (C:\\Users\\Sergey\\Documents\\projects\\paroc\\node_modules\\@babel\\parser\\lib\\index.js:10392:10)\n    at Parser.parseBlock (C:\\Users\\Sergey\\Documents\\projects\\paroc\\node_modules\\@babel\\parser\\lib\\index.js:10376:10)\n    at Parser.parseFunctionBody (C:\\Users\\Sergey\\Documents\\projects\\paroc\\node_modules\\@babel\\parser\\lib\\index.js:9424:24)\n    at Parser.parseArrowExpression (C:\\Users\\Sergey\\Documents\\projects\\paroc\\node_modules\\@babel\\parser\\lib\\index.js:9365:10)\n    at Parser.parseExprAtom (C:\\Users\\Sergey\\Documents\\projects\\paroc\\node_modules\\@babel\\parser\\lib\\index.js:8715:18)\n    at Parser.parseExprSubscripts (C:\\Users\\Sergey\\Documents\\projects\\paroc\\node_modules\\@babel\\parser\\lib\\index.js:8412:23)\n    at Parser.parseMaybeUnary (C:\\Users\\Sergey\\Documents\\projects\\paroc\\node_modules\\@babel\\parser\\lib\\index.js:8392:21)\n    at Parser.parseExprOps (C:\\Users\\Sergey\\Documents\\projects\\paroc\\node_modules\\@babel\\parser\\lib\\index.js:8267:23)\n    at Parser.parseMaybeConditional (C:\\Users\\Sergey\\Documents\\projects\\paroc\\node_modules\\@babel\\parser\\lib\\index.js:8240:23)\n    at Parser.parseMaybeAssign (C:\\Users\\Sergey\\Documents\\projects\\paroc\\node_modules\\@babel\\parser\\lib\\index.js:8187:21)\n    at Parser.parseExprListItem (C:\\Users\\Sergey\\Documents\\projects\\paroc\\node_modules\\@babel\\parser\\lib\\index.js:9491:18)\n    at Parser.parseCallExpressionArguments (C:\\Users\\Sergey\\Documents\\projects\\paroc\\node_modules\\@babel\\parser\\lib\\index.js:8621:22)\n    at Parser.parseSubscript (C:\\Users\\Sergey\\Documents\\projects\\paroc\\node_modules\\@babel\\parser\\lib\\index.js:8514:29)\n    at Parser.parseSubscripts (C:\\Users\\Sergey\\Documents\\projects\\paroc\\node_modules\\@babel\\parser\\lib\\index.js:8433:19)\n    at Parser.parseExprSubscripts (C:\\Users\\Sergey\\Documents\\projects\\paroc\\node_modules\\@babel\\parser\\lib\\index.js:8422:17)\n    at Parser.parseMaybeUnary (C:\\Users\\Sergey\\Documents\\projects\\paroc\\node_modules\\@babel\\parser\\lib\\index.js:8392:21)\n    at Parser.parseExprOps (C:\\Users\\Sergey\\Documents\\projects\\paroc\\node_modules\\@babel\\parser\\lib\\index.js:8267:23)\n    at Parser.parseMaybeConditional (C:\\Users\\Sergey\\Documents\\projects\\paroc\\node_modules\\@babel\\parser\\lib\\index.js:8240:23)\n    at Parser.parseMaybeAssign (C:\\Users\\Sergey\\Documents\\projects\\paroc\\node_modules\\@babel\\parser\\lib\\index.js:8187:21)\n    at Parser.parseExpression (C:\\Users\\Sergey\\Documents\\projects\\paroc\\node_modules\\@babel\\parser\\lib\\index.js:8135:23)\n    at Parser.parseStatementContent (C:\\Users\\Sergey\\Documents\\projects\\paroc\\node_modules\\@babel\\parser\\lib\\index.js:9958:23)\n    at Parser.parseStatement (C:\\Users\\Sergey\\Documents\\projects\\paroc\\node_modules\\@babel\\parser\\lib\\index.js:9829:17)\n    at Parser.parseBlockOrModuleBlockBody (C:\\Users\\Sergey\\Documents\\projects\\paroc\\node_modules\\@babel\\parser\\lib\\index.js:10405:25)\n    at Parser.parseBlockBody (C:\\Users\\Sergey\\Documents\\projects\\paroc\\node_modules\\@babel\\parser\\lib\\index.js:10392:10)\n    at Parser.parseTopLevel (C:\\Users\\Sergey\\Documents\\projects\\paroc\\node_modules\\@babel\\parser\\lib\\index.js:9758:10)\n    at Parser.parse (C:\\Users\\Sergey\\Documents\\projects\\paroc\\node_modules\\@babel\\parser\\lib\\index.js:11270:17)\n    at parse (C:\\Users\\Sergey\\Documents\\projects\\paroc\\node_modules\\@babel\\parser\\lib\\index.js:11306:38)\n    at parser (C:\\Users\\Sergey\\Documents\\projects\\paroc\\node_modules\\@babel\\core\\lib\\transformation\\normalize-file.js:170:34)\n    at normalizeFile (C:\\Users\\Sergey\\Documents\\projects\\paroc\\node_modules\\@babel\\core\\lib\\transformation\\normalize-file.js:138:11)");
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var jquery__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! jquery */ "./node_modules/jquery/dist/jquery.js");
+/* harmony import */ var jquery__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(jquery__WEBPACK_IMPORTED_MODULE_0__);
+
+jquery__WEBPACK_IMPORTED_MODULE_0___default()(function (_) {
+  jquery__WEBPACK_IMPORTED_MODULE_0___default()("body").on("click", ".tabs__tab", function () {
+    var $this = jquery__WEBPACK_IMPORTED_MODULE_0___default()(this);
+    if ($this.hasClass("active")) return;
+    var id = $this.attr("data-id"),
+        $parent = $this.closest(".tabs");
+    $parent.find(".tabs__tab.active, .tabs__content.active").removeClass("active");
+    $this.addClass("active");
+    $parent.find(".tabs__content[data-id='" + id + "']").addClass("active");
+  });
+  jquery__WEBPACK_IMPORTED_MODULE_0___default()("body").on("click", ".main-tabs__tab", function () {
+    var $this = jquery__WEBPACK_IMPORTED_MODULE_0___default()(this);
+    if ($this.hasClass("active")) return;
+    var id = $this.attr("data-id"),
+        $parent = $this.closest(".main-tabs");
+    $parent.find(".main-tabs__tab.active, .main-tabs__content.active").removeClass("active");
+    $this.addClass("active");
+    $parent.find(".main-tabs__content[data-id='" + id + "']").addClass("active");
+  });
+});
 
 /***/ })
 
